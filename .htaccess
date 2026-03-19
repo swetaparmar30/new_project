@@ -1,0 +1,303 @@
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+#RewriteCond %{HTTP_HOST} !^www\. [NC]
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Redirect specific old URL to new URL
+RewriteCond %{REQUEST_URI} ^/newport-garage-doors/?$ [NC]
+RewriteRule ^ /locations/newport-garage-doors/ [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/dover-garage-doors/?$ [NC]
+RewriteRule ^ /locations/dover-garage-doors/ [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/georgetown-garage-doors/?$ [NC]
+RewriteRule ^ /locations/georgetown-garage-doors/ [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/salisbury-garage-doors/?$ [NC]
+RewriteRule ^ /locations/salisbury-garage-doors/ [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/hollow-metal-door/?$ [NC]
+RewriteRule ^ /commercial/hollow-metal-doors/ [R=301,L]
+
+
+RewriteRule ^Products.cfm$ / [R=301,L]
+RewriteRule ^index.php$ / [R=301,L]
+
+RewriteCond %{REQUEST_URI} !(/$|\.|admin\/|meeting-form|get-in-touch/store|logout)
+RewriteRule (.*) %{REQUEST_URI}/ [R=301,L] 
+
+RewriteRule ^blog/oh-no-i-backed-into-my-garage-door-what-are-my-options/$ /blog/how-to-extend-wi-fi-to-a-detached-garage/ [R=301,L]
+RewriteRule ^blog/what-is-the-learn-button-on-a-garage-door-opener-and-why-do-you-need-it/$ /blog/how-to-extend-wi-fi-to-a-detached-garage/ [R=301,L]
+RewriteRule ^blog/how-to-set-up-a-garage-door-opener-in-your-car/$ /blog/how-to-extend-wi-fi-to-a-detached-garage/ [R=301,L]
+
+RewriteRule ^commercial/steelpro-sectional-ribbed-steel-overhead-doors/$ /commercial/steelpro-series [R=301,L]
+RewriteRule ^commercial/steelform-series/?$ /commercial/steelpro-series [R=301,L] 
+RewriteRule ^commercial/commercial-sectional-garage-doors/steelform-s-16/?$ /commercial/steelpro-series/ [R=301,L]
+RewriteRule ^commercial/commercial-sectional-garage-doors/steelform-s-20-and-s-24/?$ /commercial/steelpro-series/ [R=301,L]
+RewriteRule ^commercial/commercial-sectional-garage-doors/steelform-s-24c/?$ /commercial/steelpro-series/sp24c/ [R=301,L]
+RewriteRule ^steelform-s-20-and-s-24/?$ /commercial/steelpro-series/sp20/ [R=301,L]
+RewriteRule ^steelform-s-24c/?$ /commercial/steelpro-series/sp24c/ [R=301,L]
+RewriteRule ^commercial/steelform-series/steelform-s-24c/?$ /commercial/steelpro-series/sp24c/ [R=301,L]
+RewriteRule ^commercial/steelform-series/steelform-s-20-and-s-24/?$ /commercial/steelpro-series/ [R=301,L]
+RewriteRule ^commercial/steelpro-sectional-ribbed-steel-overhead-doors/steelform-s-24c/?$ /commercial/steelpro-series/sp24c/ [R=301,L]
+RewriteRule ^commercial/steelpro-sectional-ribbed-steel-overhead-doors/steelform-s-20-and-s-24/?$ /commercial/steelpro-series/sp20/ [R=301,L]
+RewriteRule ^(.*)$ public/$1 [L]
+
+#new add in ht access
+Redirect 301 /commercial/controlhoist-commercial-door-operators /commercial/controlhoist-commercial-operators
+Redirect 301 /commercial/flexfamily-thermal-sectional-flexible-durable-doors /commercial/flexfit-series
+Redirect 301 /commercial/thermaseal /commercial/thermaseal-series
+
+RewriteRule ^commercial/thermal-efficient-loading-dock-doors/th160-thermal-sectional-door/th160-thermal-sectional-doors/?$ /commercial/commercial-sectional-garage-doors/th160-thermal-sectional-doors/ [R=301,L]
+
+Redirect 301 /index.cfm /
+Redirect 301 /Service.cfm /
+Redirect 301 /RaynorProducts.cfm /
+Redirect 301 /advantage.cfm /
+Redirect 301 /directions.cfm /
+Redirect 301 /components.cfm /
+Redirect 301 /residential.cfm /
+Redirect 301 /commercial.cfm /
+Redirect 301 /contact.cfm /contact
+Redirect 301 /Contact.cfm /contact
+Redirect 301 https://sandkdoor.com/Contact.cfm https://www.sandkdoor.com/contact
+
+Redirect 301 /commercial/traffic-doors /
+Redirect 301 /commercial/commercial-high-speed-fabric-doors/fabricoil-traffic-doors /
+Redirect 301 /commercial/fabricoil-traffic-doors /
+
+# Redirect multiple old paths to new path
+Redirect 301 /residential/classic-style-garage-doors/styleview-collection-aluminum-garage-doors /residential/styleview-collection-aluminum-garage-doors
+Redirect 301 /residential/farmhouse-style-garage-doors/styleview-collection-aluminum-garage-doors/ /residential/styleview-collection-aluminum-garage-doors
+Redirect 301 /residential/contemporary-style-garage-doors/styleview-collection-aluminum-garage-doors/ /residential/styleview-collection-aluminum-garage-doors
+Redirect 301 /residential/woodlook-garage-doors/styleview-collection-aluminum-garage-doors/ /residential/styleview-collection-aluminum-garage-doors
+Redirect 301 /residential/uninsulated-garage-doors/styleview-collection-aluminum-garage-doors/ /residential/styleview-collection-aluminum-garage-doors
+
+
+RewriteEngine On
+
+# Redirect multiple old paths to new path
+Redirect 301 /residential/classic-style-garage-doors/revival-wood-collection/ /residential/distinctions-series-custom-garage-doors/revival-wood-collection
+Redirect 301 /residential/farmhouse-style-garage-doors/revival-wood-collection/ /residential/distinctions-series-custom-garage-doors/revival-wood-collection
+Redirect 301 /residential/contemporary-style-garage-doors/revival-wood-collection/ /residential/distinctions-series-custom-garage-doors/revival-wood-collection
+Redirect 301 /residential/woodlook-garage-doors/revival-wood-collection/ /residential/distinctions-series-custom-garage-doors/revival-wood-collection
+Redirect 301 /residential/polyurethane-insulated-garage-doors/revival-wood-collection/ /residential/distinctions-series-custom-garage-doors/revival-wood-collection
+
+
+RewriteEngine On
+
+# Residential Garage Doors Redirects
+
+Redirect 301 /residential/openers/smart-keypad-lever /residential/smart-garage-accessories
+Redirect 301 /residential/openers/smart-touchscreen-deadbolt /residential/smart-garage-accessories
+
+# Eden Coast by Raynor
+Redirect 301 /residential/classic-style-garage-doors/eden-coast-steel-carriage-house-garage-door /residential/eden-coast-steel-carriage-house-garage-door
+Redirect 301 /residential/farmhouse-style-garage-doors/eden-coast-steel-carriage-house-garage-door /residential/eden-coast-steel-carriage-house-garage-door
+Redirect 301 /residential/woodlook-garage-doors/eden-coast-steel-carriage-house-garage-door /residential/eden-coast-steel-carriage-house-garage-door
+Redirect 301 /residential/polyurethane-insulated-garage-doors/eden-coast-steel-carriage-house-garage-door /residential/eden-coast-steel-carriage-house-garage-door
+
+# RockCreeke™
+Redirect 301 /residential/classic-style-garage-doors/rockcreeke-carriage-house-residential-garage-door /residential/distinctions-series-custom-garage-doors/rockcreeke-carriage-house-residential-garage-door
+Redirect 301 /residential/farmhouse-style-garage-doors/rockcreeke-carriage-house-residential-garage-door /residential/distinctions-series-custom-garage-doors/rockcreeke-carriage-house-residential-garage-door
+Redirect 301 /residential/polyurethane-insulated-garage-doors/rockcreeke-carriage-house-residential-garage-door /residential/distinctions-series-custom-garage-doors/rockcreeke-carriage-house-residential-garage-door
+
+# Country Manor™
+Redirect 301 /residential/classic-style-garage-doors/country-manor /residential/country-manor
+Redirect 301 /residential/farmhouse-style-garage-doors/country-manor /residential/country-manor
+Redirect 301 /residential/polyurethane-insulated-garage-doors/country-manor /residential/country-manor
+
+# Aspen™ AP200LV LuxeVue
+Redirect 301 /residential/classic-style-garage-doors/aspen-ap200lv-luxevue /residential/aspen-series/aspen-ap200lv-luxevue
+Redirect 301 /residential/farmhouse-style-garage-doors/aspen-ap200lv-luxevue /residential/aspen-series/aspen-ap200lv-luxevue
+Redirect 301 /residential/woodlook-garage-doors/aspen-ap200lv-luxevue /residential/aspen-series/aspen-ap200lv-luxevue
+
+# Aspen™ AP200N Contempra
+Redirect 301 /residential/classic-style-garage-doors/aspen-ap200n /residential/aspen-series/aspen-ap200n
+Redirect 301 /residential/farmhouse-style-garage-doors/aspen-ap200n /residential/aspen-series/aspen-ap200n
+Redirect 301 /residential/contemporary-style-garage-doors/aspen-ap200n /residential/aspen-series/aspen-ap200n
+Redirect 301 /residential/woodlook-garage-doors/aspen-ap200n /residential/aspen-series/aspen-ap200n
+
+# Aspen™ AP200
+Redirect 301 /residential/classic-style-garage-doors/aspen-ap200 /residential/aspen-series/aspen-ap200
+Redirect 301 /residential/farmhouse-style-garage-doors/aspen-ap200 /residential/aspen-series/aspen-ap200
+Redirect 301 /residential/contemporary-style-garage-doors/aspen-ap200 /residential/aspen-series/aspen-ap200
+Redirect 301 /residential/woodlook-garage-doors/aspen-ap200 /residential/aspen-series/aspen-ap200
+
+# Aspen™ AP138
+Redirect 301 /residential/classic-style-garage-doors/aspen-ap138 /residential/aspen-series/aspen-ap138
+Redirect 301 /residential/farmhouse-style-garage-doors/aspen-ap138 /residential/aspen-series/aspen-ap138
+Redirect 301 /residential/contemporary-style-garage-doors/aspen-ap138 /residential/aspen-series/aspen-ap138
+Redirect 301 /residential/woodlook-garage-doors/aspen-ap138 /residential/aspen-series/aspen-ap138
+
+# Encore™ EN200 Steel
+Redirect 301 /residential/classic-style-garage-doors/encore-en200 /residential/encore-series/encore-en200
+Redirect 301 /residential/farmhouse-style-garage-doors/encore-en200 /residential/encore-series/encore-en200
+Redirect 301 /residential/contemporary-style-garage-doors/encore-en200 /residential/encore-series/encore-en200
+Redirect 301 /residential/woodlook-garage-doors/encore-en200 /residential/encore-series/encore-en200
+Redirect 301 /residential/polystyrene-insulated-garage-doors/encore-en200 /residential/encore-series/encore-en200
+
+# TradeMark™ Steel Pan
+Redirect 301 /residential/classic-style-garage-doors/trademark-steel-pan-garage-doors /residential/trademark-steel-pan-garage-doors
+Redirect 301 /residential/farmhouse-style-garage-doors/trademark-steel-pan-garage-doors /residential/trademark-steel-pan-garage-doors
+Redirect 301 /residential/polystyrene-insulated-garage-doors/trademark-steel-pan-garage-doors /residential/trademark-steel-pan-garage-doors
+Redirect 301 /residential/uninsulated-garage-doors/trademark-steel-pan-garage-doors /residential/trademark-steel-pan-garage-doors
+Redirect 301 /residential/advantage-series-steel-pan-garage-doors/trademark-steel-pan-garage-doors /residential/trademark-steel-pan-garage-doors
+
+# BuildMark® Steel Pan
+Redirect 301 /residential/classic-style-garage-doors/buildmark-steel-pan-garage-doors /residential/buildmark-steel-pan-garage-doors
+Redirect 301 /residential/farmhouse-style-garage-doors/buildmark-steel-pan-garage-doors /residential/buildmark-steel-pan-garage-doors
+Redirect 301 /residential/polystyrene-insulated-garage-doors/buildmark-steel-pan-garage-doors /residential/buildmark-steel-pan-garage-doors
+Redirect 301 /residential/uninsulated-garage-doors/buildmark-steel-pan-garage-doors /residential/buildmark-steel-pan-garage-doors
+Redirect 301 /residential/advantage-series-steel-pan-garage-doors/buildmark-steel-pan-garage-doors /residential/buildmark-steel-pan-garage-doors
+
+RewriteEngine On
+
+# TH160
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/th160-thermal-sectional-door/th160-thermal-sectional-doors /commercial/commercial-sectional-garage-doors/th160-thermal-sectional-doors
+
+# ThermaSeal Series
+Redirect 301 /commercial/thermaseal-thermal-sectional-insulated-steel-doors /commercial/thermaseal-series
+
+
+
+# ThermaSeal® TM320
+Redirect 301 /commercial/commercial-sectional-garage-doors/thermaseal-series/tm320 /commercial/commercial-sectional-garage-doors/thermaseal/tm320
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/tm320 /commercial/commercial-sectional-garage-doors/thermaseal/tm320
+Redirect 301 /commercial/fire-station-doors/sectional-thermaseal-doors/tm320 /commercial/commercial-sectional-garage-doors/thermaseal/tm320
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/thermaseal-thermal-sectional-insulated-steel-doors/tm320 /commercial/commercial-sectional-garage-doors/thermaseal/tm320
+
+# ThermaSeal® TM300
+Redirect 301 /commercial/commercial-sectional-garage-doors/thermaseal-series/tm300 /commercial/commercial-sectional-garage-doors/thermaseal/tm300
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/tm300 /commercial/commercial-sectional-garage-doors/thermaseal/tm300
+Redirect 301 /commercial/fire-station-doors/sectional-thermaseal-doors/tm300 /commercial/commercial-sectional-garage-doors/thermaseal/tm300
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/thermaseal-thermal-sectional-insulated-steel-doors/tm300 /commercial/commercial-sectional-garage-doors/thermaseal/tm300
+
+# ThermaSeal® TM220
+Redirect 301 /commercial/commercial-sectional-garage-doors/thermaseal-series/tm220 /commercial/commercial-sectional-garage-doors/thermaseal/tm220
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/tm220 /commercial/commercial-sectional-garage-doors/thermaseal/tm220
+Redirect 301 /commercial/fire-station-doors/sectional-thermaseal-doors/tm220 /commercial/commercial-sectional-garage-doors/thermaseal/tm220
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/thermaseal-thermal-sectional-insulated-steel-doors/tm220 /commercial/commercial-sectional-garage-doors/thermaseal/tm220
+
+# ThermaSeal® TM200C
+Redirect 301 /commercial/commercial-sectional-garage-doors/thermaseal-series/tm200c /commercial/commercial-sectional-garage-doors/thermaseal/tm200c
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/tm200c /commercial/commercial-sectional-garage-doors/thermaseal/tm200c
+Redirect 301 /commercial/fire-station-doors/sectional-thermaseal-doors/tm200c /commercial/commercial-sectional-garage-doors/thermaseal/tm200c
+Redirect 301 /commercial/parking-garage-doors/thermaseal/tm200c /commercial/commercial-sectional-garage-doors/thermaseal/tm200c
+
+# ThermaSeal® TM200
+Redirect 301 /commercial/commercial-sectional-garage-doors/thermaseal-series/tm200 /commercial/commercial-sectional-garage-doors/thermaseal/tm200
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/tm200 /commercial/commercial-sectional-garage-doors/thermaseal/tm200
+Redirect 301 /commercial/fire-station-doors/sectional-thermaseal-doors/tm200 /commercial/commercial-sectional-garage-doors/thermaseal/tm200
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/thermaseal-thermal-sectional-insulated-steel-doors/tm200 /commercial/commercial-sectional-garage-doors/thermaseal/tm200
+
+# ThermaSeal® TM175
+Redirect 301 /commercial/commercial-sectional-garage-doors/thermaseal-series/tm175 /commercial/commercial-sectional-garage-doors/thermaseal/tm175
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/tm175 /commercial/commercial-sectional-garage-doors/thermaseal/tm175
+Redirect 301 /commercial/fire-station-doors/sectional-thermaseal-doors/tm175 /commercial/commercial-sectional-garage-doors/thermaseal/tm175
+Redirect 301 /commercial/thermal-efficient-loading-dock-doors/thermaseal-thermal-sectional-insulated-steel-doors/tm175 /commercial/commercial-sectional-garage-doors/thermaseal/tm175
+
+# AlumaView® AV300
+Redirect 301 /commercial/commercial-sectional-garage-doors/alumaview-series/alumaview-av300 /commercial/commercial-sectional-garage-doors/alumaview-av300
+Redirect 301 /commercial/fire-station-doors/extruded-alumaview-aluminum-rail-and-stile-doors/alumaview-av300 /commercial/commercial-sectional-garage-doors/alumaview-av300
+Redirect 301 /commercial/parking-garage-doors/alumaview-aluminum-rail-and-stile-doors/alumaview-av300 /commercial/commercial-sectional-garage-doors/alumaview-av300
+Redirect 301 /commercial/commercial-sectional-garage-doors/alumaview-aluminum-rail-and-stile-doors/alumaview-av300 /commercial/commercial-sectional-garage-doors/alumaview-av300
+
+# AlumaView® AV200
+Redirect 301 /commercial/commercial-sectional-garage-doors/alumaview-series/alumaview-av200 /commercial/commercial-sectional-garage-doors/alumaview-av200
+Redirect 301 /commercial/fire-station-doors/extruded-alumaview-aluminum-rail-and-stile-doors/alumaview-av200 /commercial/commercial-sectional-garage-doors/alumaview-av200
+Redirect 301 /commercial/parking-garage-doors/alumaview-aluminum-rail-and-stile-doors/alumaview-av200 /commercial/commercial-sectional-garage-doors/alumaview-av200
+Redirect 301 /commercial/commercial-sectional-garage-doors/alumaview-aluminum-rail-and-stile-doors/alumaview-av200 /commercial/commercial-sectional-garage-doors/alumaview-av200
+
+# AlumaView® AV175
+Redirect 301 /commercial/commercial-sectional-garage-doors/alumaview-series/alumaview-av175 /commercial/commercial-sectional-garage-doors/alumaview-av175
+Redirect 301 /commercial/fire-station-doors/extruded-alumaview-aluminum-rail-and-stile-doors/alumaview-av175 /commercial/commercial-sectional-garage-doors/alumaview-av175
+Redirect 301 /commercial/parking-garage-doors/alumaview-aluminum-rail-and-stile-doors/alumaview-av175 /commercial/commercial-sectional-garage-doors/alumaview-av175
+Redirect 301 /commercial/commercial-sectional-garage-doors/alumaview-aluminum-rail-and-stile-doors/alumaview-av175 /commercial/commercial-sectional-garage-doors/alumaview-av175
+
+# FlexFit™ FF175
+Redirect 301 /commercial/commercial-sectional-garage-doors/flexfit-series/flexfit-ff175-sectional-thermal-door /commercial/commercial-sectional-garage-doors/flexfit-ff175-sectional-thermal-door
+Redirect 301 /commercial/secure-and-durable-loading-dock-doors/flexfamily-thermal-sectional-flexible-durable-doors/flexfit-ff175-sectional-thermal-door /commercial/commercial-sectional-garage-doors/flexfit-ff175-sectional-thermal-door
+Redirect 301 /commercial/commercial-sectional-garage-doors/flexfamily/flexfit-ff175-sectional-thermal-door /commercial/commercial-sectional-garage-doors/flexfit-ff175-sectional-thermal-door
+
+# FlexDoor™ FD175
+Redirect 301 /commercial/commercial-sectional-garage-doors/flexfit-series/flexdoor-fd175 /commercial/commercial-sectional-garage-doors/flexdoor-fd175
+Redirect 301 /commercial/secure-and-durable-loading-dock-doors/flexfamily-thermal-sectional-flexible-durable-doors/flexdoor-fd175 /commercial/commercial-sectional-garage-doors/flexdoor-fd175
+Redirect 301 /commercial/commercial-sectional-garage-doors/flexfamily/flexdoor-fd175 /commercial/commercial-sectional-garage-doors/flexdoor-fd175
+
+# FlexDock™
+Redirect 301 /commercial/commercial-sectional-garage-doors/flexfit-series/flexdock /commercial/commercial-sectional-garage-doors/flexdock
+Redirect 301 /commercial/secure-and-durable-loading-dock-doors/flexfamily-thermal-sectional-flexible-durable-doors/flexdock /commercial/commercial-sectional-garage-doors/flexdock
+Redirect 301 /commercial/commercial-sectional-garage-doors/flexfamily/flexdock /commercial/commercial-sectional-garage-doors/flexdock
+
+# FlexRe-Fit™
+Redirect 301 /commercial/commercial-sectional-garage-doors/flexfit-series/flexre-fit /commercial/commercial-sectional-garage-doors/flexre-fit
+Redirect 301 /commercial/secure-and-durable-loading-dock-doors/flexfamily-thermal-sectional-flexible-durable-doors/flexre-fit /commercial/commercial-sectional-garage-doors/flexre-fit
+Redirect 301 /commercial/commercial-sectional-garage-doors/flexfamily/flexre-fit /commercial/commercial-sectional-garage-doors/flexre-fit
+
+# Raynor EnergyCore EC200
+Redirect 301 /commercial/commercial-sectional-garage-doors/energycore-ec200/raynor-energycore-ec200 /commercial/commercial-sectional-garage-doors/raynor-energycore-ec200
+Redirect 301 /commercial/commercial-sectional-garage-doors/raynor-energycore-series/energycore-ec200 /commercial/commercial-sectional-garage-doors/raynor-energycore-ec200
+Redirect 301 /commercial/fire-station-doors/energycore/energycore-ec200 /commercial/commercial-sectional-garage-doors/raynor-energycore-ec200
+
+#Redirect 301 /commercial/commercial-sectional-garage-doors/energycore/raynor-energycore-ec200 /commercial/commercial-sectional-garage-doors/raynor-energycore-ec200
+Redirect 301 /commercial/commercial-sectional-garage-doors/raynor-energycore-ec200 /commercial/commercial-sectional-garage-doors/energycore/raynor-energycore-ec200
+
+# Raynor EnergyCore EC224
+Redirect 301 /commercial/commercial-sectional-garage-doors/raynor-energycore-series/raynor-energycore-ec224 /commercial/commercial-sectional-garage-doors/raynor-energycore-ec224
+Redirect 301 /commercial/fire-station-doors/energycore/raynor-energycore-ec224 /commercial/commercial-sectional-garage-doors/raynor-energycore-ec224
+
+#Redirect 301 /commercial/commercial-sectional-garage-doors/energycore/raynor-energycore-ec224 /commercial/commercial-sectional-garage-doors/raynor-energycore-ec224
+Redirect 301 /commercial/commercial-sectional-garage-doors/raynor-energycore-ec224 /commercial/commercial-sectional-garage-doors/energycore/raynor-energycore-ec224
+
+# SteelPro™ Series
+Redirect 301 /commercial/steelform-series /commercial/steelpro-series
+Redirect 301 /commercial/commercial-sectional-garage-doors/steelform-s-20-and-s-24 /commercial/steelpro-series
+Redirect 301 /commercial/commercial-sectional-garage-doors/steelform-s-24c /commercial/steelpro-series/sp24c
+
+
+# Eden Coast by Raynor
+Redirect 301 /commercial/eden-coast-by-raynor-residential-garage-door /commercial/commercial-sectional-garage-doors/eden-coast-by-raynor-residential-garage-door
+
+# Aspen™ AP200LV LuxeVue
+Redirect 301 /commercial/aspen-ap200lv-luxevue-steel-residential-garage-door /commercial/commercial-sectional-garage-doors/aspen-ap200lv-luxevue-steel-residential-garage-door
+
+# Aspen™ AP200N Contempra
+Redirect 301 /commercial/aspen-ap200n-steel-residential-garage-door /commercial/commercial-sectional-garage-doors/aspen-ap200n-steel-residential-garage-door
+Redirect 301 /commercial/aspen-series/aspen-ap200n /commercial/commercial-sectional-garage-doors/aspen-ap200n-steel-residential-garage-door
+
+# Aspen™ AP200
+Redirect 301 /commercial/aspen-ap200-steel-residential-garage-door /commercial/commercial-sectional-garage-doors/aspen-ap200-steel-residential-garage-door
+Redirect 301 /commercial/aspen-series/aspen-ap200-steel-residential-garage-door /commercial/commercial-sectional-garage-doors/aspen-ap200-steel-residential-garage-door
+
+# Aspen™ AP138
+Redirect 301 /commercial/aspen-ap138 /commercial/commercial-sectional-garage-doors/aspen-ap138
+Redirect 301 /commercial/commercial-sectional-garage-doors/aspen-series/aspen-ap138 /commercial/commercial-sectional-garage-doors/aspen-ap138
+
+# Encore™ EN200 Steel
+Redirect 301 /commercial/encore-en200 /commercial/commercial-sectional-garage-doors/encore-en200
+
+# BuildMark® Steel Pan
+Redirect 301 /commercial/buildmark-steel-pan-garage-doors /commercial/commercial-sectional-garage-doors/buildmark-steel-pan-garage-doors
+
+# TradeMark™ Steel Pan
+Redirect 301 /commercial/trademark-steel-pan-garage-doors /commercial/commercial-sectional-garage-doors/trademark-steel-pan-garage-doors
+
+
+RewriteRule ^/*.cfm  /  [R,L]
+
+#RewriteCond %{HTTP_HOST} !^www\. [NC]
+#RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header set Cache-Control "private"
+</IfModule>
+
+

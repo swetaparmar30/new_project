@@ -1,0 +1,437 @@
+
+.header .header-menu{
+    width: 82%;
+}
+#locationcontact button.close{
+	border: none;
+    opacity: 1;
+    background-image: unset;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    background-color: transparent;
+    outline: 0;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+#locationcontact button.close img{
+	width: 25px;
+    height: 25px;
+}
+
+#locationcontact .modal-dialog{
+    max-width: 1000px;
+    /*width: 750px;*/
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0 auto;
+}
+#locationcontact .modal-dialog .modal-body h2{
+    /*margin-bottom: 25px;*/
+    color: #002855;
+    font-weight: 700;
+    font-size: 44px;
+    margin-bottom: 41px;
+}
+#locationcontact .modal-dialog .modal-body h3{
+    color: #333;
+    font-weight: 600;
+}
+#locationcontact .modal-dialog .modal-body{
+     /*padding: 50px 75px;*/
+     padding: 81px 148px 80px 148px;
+     border-radius: 0;
+}
+
+#locationcontact .modal-dialog .model-body{
+	padding: 60px 80px;
+    border-radius: 0;
+   
+}
+
+#locationcontact .modal-dialog .modal-content{
+   
+    border-radius: 0;
+}
+
+#locationcontact .modal-dialog .modal-content .location-wise-contact .common-btn.header-booking-apt-btn{
+    background-color: #F1F1F1 !important;
+    padding: 20px 30px;
+
+}
+
+#locationcontact .inner-div .common-btn.header-booking-apt-btn{
+	/* display: block; */
+    text-transform: none;
+    margin-top: 0px;
+    color: #333 !important;
+    display: flex;
+    align-items: center;
+}
+#locationcontact .inner-div .location-wise-contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+#locationcontact .inner-div .location-wise-contact span{
+    display: block;
+    padding-top: 10px;
+    color: #002855 !important;
+}
+#locationcontact .inner-div .location-wise-contact span img{
+    width: 22px;
+    margin-right: 10px;
+}
+.location-item a:hover {
+    background-color: #0C4483 !important;
+}
+
+header.header.desk-header .header-new .common-btn.call-buton{
+    margin-top: 0 !important;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 8px 15px;
+    display: flex;
+}
+
+    .location-item a img{
+        /*width: 15px;*/
+        margin-right: 10px;
+        width: 23px;
+        height: 23px;
+    }
+    .location-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 30px;
+    }
+    .location-item a{
+        border-radius: 0px;
+        background-color: #002855 !important;
+        padding: 18px 50px 18px 50px;
+    }
+    .location-item a span{
+        color: #fff !important;
+        font-size: 25px;
+    }
+    .location-item p{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        line-height: normal;
+    }
+
+
+@media (max-width:575.98px){
+    #locationcontact .modal-dialog{
+        width: auto;
+        margin: 0px 15px;
+    }
+    #locationcontact .inner-div .location-wise-contact{
+        display: block;
+    }
+    #locationcontact .modal-dialog .modal-body {
+        padding: 50px 12px;
+    }
+    #locationcontact .inner-div .location-wise-contact span{
+        padding-top:0px ;
+    }
+    #locationcontact .modal-dialog .modal-body h2{
+        /*margin-bottom: 20px;*/
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+    #locationcontact .inner-div .location-wise-contact span img{
+        width: 20px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+    #locationcontact .inner-div .common-btn.header-booking-apt-btn{
+        margin-top: 5px;
+        margin-bottom: 16px;
+
+    }
+
+#locationcontact .inner-div .location-item:last-child.common-btn.header-booking-apt-btn{margin-bottom: 0 !important;}
+
+#locationcontact button.close img{
+	width: 20px;
+    height: 20px;
+}
+
+
+    #locationcontact button.close{
+        right: 18px;
+        top: 12px;
+    }
+    .location-grid{
+        display: block;
+    }
+    .location-item a span{
+        font-size: 20px;
+    }
+    .location-item a img{
+        width: 20px;
+        height: 20px;
+    }
+    .location-item a {
+        padding: 15px 30px 15px 30px;
+    }
+    .location-item p {
+        margin-bottom: 0px;
+    }
+
+}
+/*@media (max-width:767px){
+    #locationcontact .modal-dialog{
+        width: auto;
+        margin: 0px 15px;
+    }
+    #locationcontact .inner-div .location-wise-contact{
+        display: block;
+    }
+    #locationcontact .modal-dialog .modal-body {
+        padding: 40px 10px 10px 10px;
+    }
+    #locationcontact .inner-div .location-wise-contact span{
+        padding-top:0px ;
+    }
+    #locationcontact .modal-dialog .modal-body h2{
+       
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+    #locationcontact .inner-div .location-wise-contact span img{
+        width: 20px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+    #locationcontact .inner-div .common-btn.header-booking-apt-btn{
+        margin-top: 5px;
+        margin-bottom: 15px;
+
+    }
+    #locationcontact button.close{
+        right: 18px;
+        top: 10px;
+    }
+
+    .location-item a span{
+        font-size: 20px;
+    }
+    .location-item a img{
+        width: 30px;
+        height: 30px;
+    }
+    .location-item a {
+        padding: 15px 30px 15px 30px;
+    }
+    .location-item p {
+        margin-bottom: 0px;
+    }
+
+}*/
+@media (min-width: 576px) and (max-width: 767.98px){
+       #locationcontact .modal-dialog{
+        width: auto;
+        margin: 0px 15px;
+    }
+    #locationcontact .inner-div .location-wise-contact{
+        display: block;
+    }
+    #locationcontact .modal-dialog .modal-body {
+        padding: 40px 10px 40px 10px;
+    }
+    #locationcontact .inner-div .location-wise-contact span{
+        padding-top:0px ;
+    }
+    #locationcontact .modal-dialog .modal-body h2{
+        /*margin-bottom: 20px;*/
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+    #locationcontact .inner-div .location-wise-contact span img{
+        width: 20px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+    #locationcontact .inner-div .common-btn.header-booking-apt-btn{
+        margin-top: 10px;
+        /*margin-bottom: 15px;*/
+
+    }
+    #locationcontact button.close{
+        right: 18px;
+        top: 10px;
+    }
+/*    .location-grid{
+        display: block;
+    }*/
+    .location-item a span{
+        font-size: 20px;
+    }
+    .location-item a img{
+        width: 20px;
+        height: 20px;
+    }
+    .location-item a {
+        padding: 15px 25px 15px 25px;
+    }
+    .location-item p {
+        margin-bottom: 0px;
+    }
+     
+}
+
+@media (min-width:768px) and (max-width:991.98px){
+    header.header.desk-header .header-new .common-btn.call-buton{
+        padding: 3px 7px !important;
+        font-size: 10px !important;
+        line-height: 16px;
+    }
+    header.header.desk-header .header-new .common-btn.call-buton img{
+        width: 23px;
+        height: 15px;
+        padding-right: 5px;
+    }
+    #locationcontact .inner-div .location-wise-contact span img {
+        width: 20px;
+    }
+
+        #locationcontact .modal-dialog{
+        width: 700px;
+        margin: 0px auto;
+    }
+    #locationcontact .inner-div .location-wise-contact{
+        display: block;
+    }
+    #locationcontact .modal-dialog .modal-body {
+        padding: 40px 80px;
+    }
+    #locationcontact .inner-div .location-wise-contact span{
+        padding-top:0px ;
+    }
+    #locationcontact .modal-dialog .modal-body h2{
+        /*margin-bottom: 20px;*/
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+    #locationcontact .inner-div .location-wise-contact span img{
+        width: 20px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+    #locationcontact .inner-div .common-btn.header-booking-apt-btn{
+        margin-top: 10px;
+        /*margin-bottom: 15px;*/
+
+    }
+    #locationcontact button.close{
+        right: 20px;
+        top: 15px;
+    }
+
+
+#locationcontact button.close img{
+	width: 20px;
+    height: 20px;
+}
+    
+/*    .location-grid{
+        display: block;
+    }*/
+    .location-item a span{
+        font-size: 20px;
+    }
+    .location-item a img{
+        width: 20px;
+        height: 20px;
+    }
+    .location-item a {
+        padding: 15px 25px 15px 25px;
+    }
+    .location-item p {
+        margin-bottom: 0px;
+    }
+
+
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    header.header.desk-header .header-new .common-btn.call-buton{
+        font-size: 13px;
+        line-height: 20px;
+        padding: 6px 11px;
+        display: flex;
+        align-items: center;
+    }
+    header.header.desk-header .header-new .common-btn.call-buton img{
+        width: 30px;
+        height: 20px;
+    }
+    #locationcontact .inner-div .location-wise-contact span img {
+        width: 18px;
+    }
+    #locationcontact .inner-div .location-wise-contact span{
+        padding-top: 7px;
+    }
+    #locationcontact .modal-dialog .modal-body{
+     /*padding: 50px 75px;*/
+         padding: 80px;
+    }
+    #locationcontact .modal-dialog{max-width: 900px;}
+    .location-item a span{font-size: 22px;}
+}
+@media (min-width: 1200px) and (max-width: 1399.98px){
+    header.header.desk-header .header-new .common-btn.call-buton{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    #locationcontact .inner-div .location-wise-contact span img {
+        width: 20px;
+    }
+
+#locationcontact .modal-dialog{max-width: 900px;
+   
+}
+
+ #locationcontact .modal-dialog .modal-body{padding: 80px 100px;}
+.location-item a span{font-size: 22px;}
+
+
+
+
+
+}
+@media (min-width: 1400px) and (max-width: 1500px) {
+    #locationcontact .inner-div .location-wise-contact span{
+        padding-top: 6PX;
+    }
+    #locationcontact .inner-div .location-wise-contact span img {
+        width: 20px;
+    }
+
+
+}
+@media (min-width:1500px) and (max-width:1797px) {
+    #locationcontact .inner-div .location-wise-contact span img {
+        width: 20px;
+    }
+    #locationcontact .inner-div .location-wise-contact span{
+        padding-top: 5px;
+    }
+    #locationcontact .modal-dialog .modal-body{
+        padding: 81px 148px 80px 148px;
+    }
+
+}
+@media (min-width:1797px){
+
+}
+

@@ -1,0 +1,1611 @@
+/*Mobile Slider*/
+.mobile-configurations-sec {
+    display: none;
+}
+
+.hollow-metal-door-handling-section .mobile-single-soor-sec {
+    display: none;
+}
+
+.hollow-metal-door-handling-section .mobile-double-soor-sec {
+    display: none;
+}
+
+.metal-door-frame-config-section .mobile-meta-frames-sec {
+    display: none;
+}
+
+.hollow-metal-door-hardware-section .mobile-metal-hardware-sec {
+    display: none;
+}
+
+.mobile-slider-sec figure a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-in;
+}
+
+/*.mobile-slider-sec figure .normal-img { width: 100%; height: auto; object-fit: cover; }*/
+.mobile-slider-sec img.prev-img-mb {
+    transform: rotate(180deg);
+    margin-bottom: 50px;
+}
+
+.mobile-slider-sec img.next-img-mb {
+    margin-bottom: 50px;
+}
+
+.mobile-slider-sec .text-sec {
+    margin-top: 18px;
+}
+
+.mobile-slider-sec .text-sec h6 {
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+    color: #002855;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.mobile-slider-sec .text-sec p {
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-weight: 700;
+    color: #333333;
+}
+
+.mobile-slider-sec .carousel-indicators [data-bs-target] {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin: 0px 5px;
+    background-color: #000866;
+}
+
+.mobile-slider-sec .carousel-indicators {
+    display: block;
+    position: unset;
+    margin: 10px 0 0 0;
+}
+
+.hollow-metal-door-hardware-section .each-box .inner-sec {
+    margin: 0 8px;
+    text-align: center;
+    border: 1px solid #0028554d;
+    margin-bottom: 40px;
+}
+
+.hollow-metal-door-hardware-section .each-box .inner-sec .item-image {
+    background-color: #eeeeee;
+}
+
+.hollow-metal-door-hardware-section .each-box .inner-sec h4 {
+    color: #002855;
+    font-size: 30px;
+    line-height: 31px;
+    font-weight: 700;
+}
+
+.hollow-metal-door-hardware-section .each-box .inner-sec .item-name {
+    padding: 25px 0;
+}
+
+.metal-door-frame-config-section .width-requirement-sec {
+    margin-top: 90px;
+}
+
+.metal-door-frame-config-section .meta-door-frames-items-sec {
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.metal-door-frame-config-section .configurations-headings-section p {
+    padding: 0 100px;
+}
+
+.metal-door-frame-config-section .configurations-box-section {
+    text-align: center;
+}
+
+.metal-door-frame-config-section .configurations-box-section p {
+    font-size: 22px;
+    line-height: 28px;
+    color: #333333;
+    font-weight: 700;
+}
+
+.metal-door-frame-config-section .width-requirement-sec h2 {
+    text-align: left;
+}
+
+.metal-door-frame-config-section .width-requirement-sec .right-side {
+    text-align: center;
+}
+
+.metal-door-frame-config-section.sandk-inner-common .width-requirement-sec h2::after {
+    margin: 30px 0 35px 0 !important;
+}
+
+.metal-door-frame-config-section .width-requirement-sec p strong {
+    color: #002855;
+    font-weight: 700;
+}
+
+.metal-door-frame-config-section .width-requirement-sec p {
+    margin-bottom: 20px;
+}
+
+.metal-door-frames-sec {
+    background-color: #f1f1f1;
+}
+
+.metal-door-frames-sec .right-side p {
+    padding-right: 90px;
+}
+
+.metal-door-frames-sec h2 {
+    text-align: left;
+}
+
+.metal-door-frames-sec.sandk-inner-common h2::after {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.all-service-sections .planned-maintenance-programme-sec h2,
+.all-service-sections .commercial-emergency-service-sec h2 {
+    text-align: left;
+}
+
+.all-service-sections .planned-maintenance-programme-sec,
+.all-service-sections .commercial-emergency-service-sec {
+    margin-bottom: 70px;
+}
+
+.all-service-sections .row {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.all-service-sections .planned-maintenance-programme-sec h2::after,
+.all-service-sections .commercial-emergency-service-sec h2::after {
+    margin: 30px 0 35px 0 !important;
+}
+
+.all-service-sections .planned-maintenance-programme-sec p,
+.all-service-sections .commercial-emergency-service-sec p {
+    padding-right: 120px;
+}
+
+.all-service-sections .makes-model-service-sec ul li {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #333333;
+    background-image: url("/front-assets/src/images/loading-dock-accessories.svg");
+    background-repeat: no-repeat;
+    background-position: 0 4px;
+    padding: 0 0 1px 30px;
+    margin-bottom: 15px;
+}
+
+.all-service-sections .makes-model-service-sec ul {
+    column-count: 2;
+    max-width: max-content;
+    gap: 90px;
+    margin: 0 auto;
+}
+
+.all-service-sections {
+    background-color: #f1f1f1;
+}
+
+.hollow-metal-door-handling-section h3 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #002855;
+}
+
+.hollow-metal-door-handling-section h3::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: #002855;
+    margin: 16px auto 70px auto !important;
+    font-weight: 700;
+}
+
+.all-service-sections .planned-maintenance-programme-sec h3,
+.all-service-sections.sandk-inner-common h3,
+.metal-door-frame-config-section h3,
+.metal-door-frames-sec h3,
+.hollow-metal-door-handling-section h3,
+.inner-hollow-configurations-section h3,
+.hollow-metal-doors-sec h3,
+.hollow-metal-configurations-section h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 35px;
+    margin-bottom: 30px;
+    color: rgb(0, 40, 85);
+}
+
+.hollow-metal-configurations-section.sandk-common-padding {
+    background-color: #F1F1F1;
+}
+
+.hollow-metal-doors-sec .left-side h2 {
+    text-align: left !important;
+}
+
+.hollow-metal-doors-sec .left-side h2::after {
+    margin: 16px auto 25px 0 !important;
+}
+
+.hollow-metal-door-handling-section h3::after {
+    display: none !important;
+}
+
+.all-service-sections.sandk-inner-common h2 {
+    font-size: 42px;
+    line-height: 50px;
+}
+
+@media(min-width: 1400px) {
+
+    .hollow-metal-doors-sec.sandk-inner-common h2,
+    .hollow-metal-configurations-section.sandk-inner-common h2,
+    .inner-hollow-configurations-section.sandk-inner-common h2,
+    .hollow-metal-door-handling-section.sandk-inner-common h2,
+    .metal-door-frames-sec.sandk-inner-common h2,
+    .metal-door-frame-config-section.sandk-inner-common h2 {
+        font-size: 42px;
+        line-height: 50px
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1800px) {
+    .loading-dock-banner-section .loading-dock-banner-content {
+        padding: 60px 23px 60px;
+    }
+
+    .hollow-metal-door-handling-section .handling-headings-section p {
+        padding: 0 125px;
+    }
+
+    .sandk-inner-common h2::after {
+        margin: 16px auto 40px auto !important;
+    }
+
+    .metal-door-frames-sec .right-side p {
+        padding-right: 50px;
+    }
+
+    .metal-door-frame-config-section .configurations-headings-section p {
+        padding: 0 70px;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec .item-name {
+        padding: 22px 0;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec h4 {
+        font-size: 27px;
+        line-height: 30px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec p,
+    .all-service-sections .commercial-emergency-service-sec p {
+        padding-right: 40px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h2::after,
+    .all-service-sections .commercial-emergency-service-sec h2::after {
+        margin: 23px 0 29px 0 !important;
+    }
+
+     /*loading-door*/
+    .work-with-your-app-section.work-sec.sandk-common-padding h2,
+    .work-with-your-app-section.inner-work-sec h2,
+    .service-all-loading-sec.sandk-common-padding h2{
+        font-size: 42px;
+        line-height: 50px;
+        margin-bottom: 25px;
+    }
+    .service-all-loading-sec.sandk-inner-common h2{
+        padding: 0px;
+    }
+    .work-with-your-app-section.work-sec.sandk-common-padding .loading-box-sec article h3,
+    .work-with-your-app-section.inner-work-sec.sandk-common .loading-box-sec article h3,
+    .service-all-loading-sec.sandk-common-padding .loading-box-sec article h3,
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 28px;
+        line-height: 36px;
+        margin: 20px 0;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 28px;
+        color: #002855;
+        font-weight: 700;
+        line-height: 40px;
+        text-align: left;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3 br{
+        display: none;
+    }
+    .work-with-your-app-section .hollow-headings-section h2::after,
+    .service-all-loading-sec .loading-dock-accessories-sec h2::after,
+    .service-all-loading-sec .parts-section h2::after{
+        margin: 16px auto 50px auto !important;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1499.98px) {
+
+}
+
+
+@media (min-width: 1500px) and (max-width: 1797.98px){
+   
+}
+
+@media(min-width: 1797.98px){
+    .metal-door-frame-config-section.sandk-common-padding{
+        padding: 100px 0 0;
+    }
+    /*loading-door*/
+    .work-with-your-app-section.work-sec.sandk-common-padding h2,
+    .work-with-your-app-section.inner-work-sec h2,
+    .service-all-loading-sec.sandk-common-padding h2{
+        font-size: 38px;
+        line-height: 45px;
+        margin-bottom: 25px;
+    }
+    .service-all-loading-sec.sandk-inner-common h2{
+        padding: 0px;
+    }
+    .work-with-your-app-section.work-sec.sandk-common-padding .loading-box-sec article h3,
+    .work-with-your-app-section.inner-work-sec.sandk-common .loading-box-sec article h3,
+    .service-all-loading-sec.sandk-common-padding .loading-box-sec article h3,
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 28px;
+        line-height: 38px;
+        margin: 17px 0;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 28px;
+        color: #002855;
+        font-weight: 700;
+        text-align: left;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3 br{
+        display: none;
+    }
+    .work-with-your-app-section .hollow-headings-section h2::after,
+    .service-all-loading-sec .loading-dock-accessories-sec h2::after,
+    .service-all-loading-sec .parts-section h2::after{
+        margin: 16px auto 35px auto !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .sandk-inner-common h2::after {
+        margin: 16px auto 40px auto !important;
+    }
+
+    .loading-dock-banner-section .loading-dock-banner-content {
+        padding: 60px 23px 60px;
+        width: 680px;
+    }
+
+    .metal-door-frames-sec .right-side p {
+        padding-right: 30px;
+    }
+
+    .metal-door-frame-config-section.sandk-inner-common h2::after {
+        margin: 16px auto 50px auto !important;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec h4 {
+        font-size: 23px;
+        line-height: 26px;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec .item-name {
+        padding: 20px 0;
+    }
+
+    .sandk-common h2 {
+        /*font-size: 29px;*/
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h2::after,
+    .all-service-sections .commercial-emergency-service-sec h2::after {
+        margin: 20px 0 25px 0 !important;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec p,
+    .all-service-sections .commercial-emergency-service-sec p {
+        padding-right: 30px;
+    }
+
+    .all-service-sections .makes-model-service-sec ul {
+        gap: 70px;
+    }
+
+    .metal-door-frames-sec .right-side {
+        padding-left: 15px;
+    }
+
+    .hollow-metal-door-handling-section h3 {
+        font-size: 29px;
+        line-height: 38px;
+    }
+
+    .hollow-metal-door-handling-section h3::after {
+        margin: 16px auto 50px auto !important;
+    }
+
+    .hollow-metal-configurations-section .sandk-inner-common h2 {
+        font-size: 38px;
+        line-height: 50px
+    }
+
+    .hollow-metal-doors-sec.sandk-inner-common h2,
+    .hollow-metal-configurations-section.sandk-inner-common h2,
+    .inner-hollow-configurations-section.sandk-inner-common h2,
+    .hollow-metal-door-handling-section.sandk-inner-common h2,
+    .metal-door-frames-sec.sandk-inner-common h2,
+    .metal-door-frame-config-section.sandk-inner-common h2,
+    .all-service-sections.sandk-inner-common h2 {
+        font-size: 38px;
+        line-height: 50px
+    }
+
+    /*loading-door*/
+    .work-with-your-app-section.work-sec.sandk-common-padding h2,
+    .work-with-your-app-section.inner-work-sec h2,
+    .service-all-loading-sec.sandk-common-padding h2{
+        font-size: 38px;
+        line-height: 45px;
+        margin-bottom: 25px;
+    }
+    .service-all-loading-sec.sandk-inner-common h2{
+        padding: 0px;
+    }
+    .work-with-your-app-section.work-sec.sandk-common-padding .loading-box-sec article h3,
+    .work-with-your-app-section.inner-work-sec.sandk-common .loading-box-sec article h3,
+    .service-all-loading-sec.sandk-common-padding .loading-box-sec article h3,
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 28px;
+        line-height: 38px;
+        margin: 17px 0;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 28px;
+        color: #002855;
+        font-weight: 700;
+        text-align: left;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3 br{
+        display: none;
+    }
+    .work-with-your-app-section .hollow-headings-section h2::after,
+    .service-all-loading-sec .loading-dock-accessories-sec h2::after,
+    .service-all-loading-sec .parts-section h2::after{
+        margin: 16px auto 35px auto !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1499.98px) {
+    .metal-door-frame-config-section.sandk-common-padding {
+        padding: 80px 0 0;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h3,
+    .all-service-sections.sandk-inner-common h3,
+    .metal-door-frame-config-section h3,
+    .metal-door-frames-sec h3,
+    .hollow-metal-door-handling-section h3,
+    .inner-hollow-configurations-section h3,
+    .hollow-metal-doors-sec h3,
+    .hollow-metal-configurations-section h3 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 40px;
+        margin-bottom: 15px;
+        color: rgb(0, 40, 85);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hollow-metal-door-hardware-section .desktop-metal-hardware-sec {
+        display: none;
+    }
+
+    .hollow-metal-door-hardware-section .mobile-metal-hardware-sec {
+        display: block;
+    }
+
+    .loading-dock-accessories-sec h2.models {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .loading-dock-accessories-sec h2.models br {
+        display: none;
+    }
+
+    .hollow-metal-door-handling-section .mobile-double-soor-sec {
+        display: none;
+        display: block;
+    }
+
+    .hollow-metal-door-handling-section .desktop-single-door-sec {
+        display: none;
+    }
+
+    .hollow-metal-door-handling-section .desktop-double-door-sec {
+        display: none;
+    }
+
+    .metal-door-frame-config-section .desktop-meta-frame-sec {
+        display: none;
+    }
+
+    .metal-door-frame-config-section .mobile-meta-frames-sec {
+        display: block;
+    }
+
+    .hollow-metal-door-handling-section .mobile-single-soor-sec {
+        display: block;
+        margin-top: 50px;
+    }
+
+    .mobile-configurations-sec {
+        display: block;
+    }
+
+    .inner-hollow-configurations-section .inner-hollow-content {
+        display: none;
+    }
+
+    .loading-dock-banner-section.hollow-metal-door-banner-section .loading-dock-banner-content {
+        padding: 15px 12px 15px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .loading-dock-banner-section.hollow-metal-door-banner-section .loading-dock-banner-content h2 {
+        padding: 0 0;
+    }
+
+    .hollow-metal-configurations-section p {
+        letter-spacing: -0.1px;
+    }
+
+    .hollow-metal-doors-sec h4 {
+        font-size: 25px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .hollow-metal-doors-sec h4::after {
+        margin: 15px auto 35px auto !important;
+    }
+
+    .inner-hollow-configurations-section .configurations-headings-section p {
+        padding: 0 0px;
+    }
+
+    .inner-hollow-configurations-section .configurations-box-section article p {
+        margin-top: 15px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .inner-hollow-configurations-section .configurations-box-section {
+        margin-bottom: 40px;
+    }
+
+    .inner-hollow-configurations-section .configurations-box-section:last-child {
+        margin-bottom: 0;
+    }
+
+    .hollow-metal-door-handling-section .handling-headings-section p {
+        padding: 0 0px;
+    }
+
+    .hollow-metal-door-handling-section h3 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+
+    .hollow-metal-door-handling-section h3::after {
+        display: none;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article .text-content {
+        margin-top: 20px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article h6 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article p {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section {
+        margin-bottom: 40px;
+    }
+
+    .double-door-section {
+        padding: 50px 0 50px;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section.box-sec {
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section article h6 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section article p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .metal-door-frames-sec .left-side {
+        display: none;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section {
+        margin-bottom: 30px;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section article .text-content {
+        margin-top: 15px;
+    }
+
+    /*.hollow-metal-door-handling-section{padding-bottom: 10px;}*/
+    .metal-door-frames-sec .right-side {
+        padding-left: 12px;
+    }
+
+    .metal-door-frames-sec h2 {
+        text-align: center;
+    }
+
+    .metal-door-frames-sec.sandk-inner-common h2::after {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .metal-door-frames-sec .right-side p {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .metal-door-frame-config-section .configurations-headings-section p {
+        padding: 0 0px;
+    }
+
+    .metal-door-frame-config-section .configurations-box-section p {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .metal-door-frame-config-section .configurations-box-section {
+        margin-bottom: 40px;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec h2 {
+        text-align: center;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec {
+        margin-top: 60px;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec p {
+        margin-bottom: 15px;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec .right-side {
+        display: none;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec h2 {
+        text-align: center;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec h4 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec .item-name {
+        padding: 14px 0;
+    }
+
+    .hollow-metal-door-hardware-section {
+        padding-bottom: 20px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec p,
+    .all-service-sections .commercial-emergency-service-sec p {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h2,
+    .all-service-sections .commercial-emergency-service-sec h2 {
+        text-align: center;
+    }
+
+    .all-service-sections .makes-model-service-sec ul {
+        column-count: 1;
+    }
+
+    .all-service-sections .makes-model-service-sec ul li {
+        font-size: 16px;
+        line-height: 24px;
+        background-size: 13px;
+        background-position: 0 6px;
+        padding-left: 22px;
+        margin-bottom: 12px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec .right-side {
+        margin-top: 0px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec .right-side h2 {
+        margin-bottom: 25px;
+    }
+
+    .all-service-sections .commercial-emergency-service-sec .left-side h2 {
+        margin-bottom: 20px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec .left-side {
+        display: none;
+    }
+
+    .all-service-sections .commercial-emergency-service-sec .right-side {
+        display: none;
+    }
+
+    .work-with-your-app-section .app-sec {
+        margin-top: 30px;
+    }
+
+    .hollow-metal-configurations-section {
+        padding: 70px 0 0;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h3,
+    .all-service-sections.sandk-inner-common h3,
+    .metal-door-frame-config-section h3,
+    .metal-door-frames-sec h3,
+    .hollow-metal-door-handling-section h3,
+    .inner-hollow-configurations-section h3,
+    .hollow-metal-doors-sec h3,
+    .hollow-metal-configurations-section h3 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 700;
+        color: #002855;
+    }
+
+    /*loading-door*/
+    .work-with-your-app-section.work-sec.sandk-common-padding h2,
+    .work-with-your-app-section.inner-work-sec h2,
+    .service-all-loading-sec.sandk-common-padding h2{
+        font-size: 28px;
+        line-height: 35px;
+        margin-bottom: 25px;
+    }
+    .service-all-loading-sec.sandk-inner-common h2{
+        padding: 0px;
+    }
+    .work-with-your-app-section.work-sec.sandk-common-padding .loading-box-sec article h3,
+    .work-with-your-app-section.inner-work-sec.sandk-common .loading-box-sec article h3,
+    .service-all-loading-sec.sandk-common-padding .loading-box-sec article h3,
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 22px;
+        line-height: 28px;
+        margin: 15px 0;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3{
+        color: #002855;
+        font-weight: 700;
+        text-align: center;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3 br{
+        display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .loading-dock-banner-section .loading-dock-banner-content {
+        padding: 30px 30px 30px;
+        width: 80%;
+    }
+
+    .metal-door-frames-sec .left-side {
+        display: none;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec h2 {
+        text-align: center;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec .left-side {
+        display: none;
+    }
+
+    .all-service-sections .commercial-emergency-service-sec h2 {
+        text-align: center;
+    }
+
+    .metal-door-frames-sec .right-side p {
+        padding-right: 0;
+    }
+
+    .inner-hollow-configurations-section .configurations-headings-section p {
+        padding: 0;
+    }
+
+    .hollow-metal-door-handling-section .handling-headings-section p {
+        padding: 0;
+    }
+
+    .metal-door-frame-config-section .configurations-headings-section p {
+        padding: 0;
+    }
+
+    .all-service-sections .commercial-emergency-service-sec p {
+        padding-right: 0;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec p {
+        padding-right: 0;
+    }
+
+    .all-service-sections .commercial-emergency-service-sec h2::after {
+        margin: 16px auto 20px auto !important;
+    }
+
+    .metal-door-frame-config-section.sandk-inner-common .width-requirement-sec h2::after {
+        margin: 16px auto 20px auto !important;
+    }
+
+    .all-service-sections .commercial-emergency-service-sec .right-side {
+        display: none;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h2 {
+        text-align: center;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h2::after {
+        margin: 16px auto 20px auto !important;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec .right-side {
+        display: none;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec h4 {
+        font-size: 25px;
+    }
+
+    .hollow-metal-door-hardware-section .desktop-metal-hardware-sec {
+        display: none;
+    }
+
+    .hollow-metal-door-hardware-section .mobile-metal-hardware-sec {
+        display: block;
+    }
+
+    .hollow-metal-door-handling-section .mobile-double-soor-sec {
+        display: none;
+        display: block;
+    }
+
+    .hollow-metal-door-handling-section .desktop-single-door-sec {
+        display: none;
+    }
+
+    .hollow-metal-door-handling-section .desktop-double-door-sec {
+        display: none;
+    }
+
+    .metal-door-frame-config-section .desktop-meta-frame-sec {
+        display: none;
+    }
+
+    .metal-door-frame-config-section .mobile-meta-frames-sec {
+        display: block;
+    }
+
+    .hollow-metal-door-handling-section .mobile-single-soor-sec {
+        display: block;
+        margin-top: 50px;
+    }
+
+    .mobile-configurations-sec {
+        display: block;
+    }
+
+    .inner-hollow-configurations-section .inner-hollow-content {
+        display: none;
+    }
+
+    .loading-dock-accessories-sec h2.models br {
+        display: none;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h3,
+    .all-service-sections.sandk-inner-common h3,
+    .metal-door-frame-config-section h3,
+    .metal-door-frames-sec h3,
+    .hollow-metal-door-handling-section h3,
+    .inner-hollow-configurations-section h3,
+    .hollow-metal-doors-sec h3,
+    .hollow-metal-configurations-section h3 {
+        font-size: 25px;
+        line-height: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 700;
+        color: #002855;
+    }
+    /*loading-door*/
+    .work-with-your-app-section.work-sec.sandk-common-padding h2,
+    .work-with-your-app-section.inner-work-sec h2,
+    .service-all-loading-sec.sandk-common-padding h2{
+        font-size: 32px;
+        line-height: 45px;
+        margin: 0 auto;
+    }
+    .work-with-your-app-section.work-sec.sandk-common-padding .loading-box-sec article h3,
+    .work-with-your-app-section.inner-work-sec.sandk-common .loading-box-sec article h3,
+    .service-all-loading-sec.sandk-common-padding .loading-box-sec article h3,
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 24px;
+        line-height: 32px;
+        margin: 20px 0;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3{
+        color: #002855;
+        font-weight: 700;
+        text-align: center;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3 br{
+        display: none;
+    }
+    .work-with-your-app-section .hollow-headings-section h2::after,
+    .service-all-loading-sec .loading-dock-accessories-sec h2::after,
+    .service-all-loading-sec .parts-section h2::after{
+        margin: 16px auto 35px auto !important;
+    }
+    
+}
+
+@media (max-width: 767.98px) {
+    .hollow-metal-configurations-section {
+        padding: 50px 0;
+    }
+
+    .metal-door-frame-config-section.sandk-common.sandk-common-padding.sandk-inner-common {
+        padding: 50px 0 0;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec p:last-child {
+        margin-bottom: 0px;
+    }
+
+    .all-service-sections .commercial-emergency-service-sec {
+        margin-bottom: 0;
+    }
+}
+
+@media(min-width: 767.98px) {
+    .all-service-sections.sandk-common .planned-maintenance-programme-sec .right-side .mobile-img {
+        display: none !important;
+    }
+
+    .all-service-sections.sandk-common .commercial-emergency-service-sec .left-side .mobile-img {
+        display: none !important;
+    }
+
+    .all-service-sections .row.planned-maintenance-programme-sec,
+    .all-service-sections .row.commercial-emergency-service-sec {
+        justify-content: center;
+        align-items: center !important;
+        display: flex;
+    }
+
+    .all-service-sections .commercial-emergency-service-sec {
+        margin-bottom: 0px;
+    }
+    .work-with-your-app-section.work-sec .inner-application-sec .loading-box-sec:nth-last-child(2) article,
+    .work-with-your-app-section.work-sec .inner-application-sec .loading-box-sec:nth-last-child(1) article {
+        margin-bottom:0px;
+    }
+}
+
+@media (max-width: 767.98px) and (orientation: landscape) {
+    .loading-dock-banner-section.hollow-metal-door-banner-section .loading-dock-banner-content {
+        padding: 15px 12px 15px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .loading-dock-banner-section.hollow-metal-door-banner-section .loading-dock-banner-content h2 {
+        padding: 0 0;
+    }
+
+    .hollow-metal-configurations-section p {
+        letter-spacing: -0.1px;
+    }
+
+    .hollow-metal-doors-sec h4 {
+        font-size: 25px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .hollow-metal-doors-sec h4::after {
+        margin: 15px auto 35px auto !important;
+    }
+
+    .inner-hollow-configurations-section .configurations-headings-section p {
+        padding: 0 0px;
+    }
+
+    .inner-hollow-configurations-section .configurations-box-section article p {
+        margin-top: 15px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .inner-hollow-configurations-section .configurations-box-section {
+        margin-bottom: 40px;
+    }
+
+    .inner-hollow-configurations-section .configurations-box-section:last-child {
+        margin-bottom: 0;
+    }
+
+    .hollow-metal-door-handling-section .handling-headings-section p {
+        padding: 0 0px;
+    }
+
+    .hollow-metal-door-handling-section h3 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .hollow-metal-door-handling-section h3::after {
+        margin: 15px auto 30px auto !important;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article .text-content {
+        margin-top: 20px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article h6 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article p {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section {
+        margin-bottom: 40px;
+    }
+
+    .double-door-section {
+        padding: 50px 0 50px;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section.box-sec {
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section article h6 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section article p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .metal-door-frames-sec .left-side {
+        display: none;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section {
+        margin-bottom: 30px;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section article .text-content {
+        margin-top: 15px;
+    }
+
+    .metal-door-frames-sec .right-side {
+        padding-left: 12px;
+    }
+
+    .metal-door-frames-sec h2 {
+        text-align: center;
+    }
+
+    .metal-door-frames-sec.sandk-inner-common h2::after {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .metal-door-frames-sec .right-side p {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .metal-door-frame-config-section .configurations-headings-section p {
+        padding: 0 0px;
+    }
+
+    .metal-door-frame-config-section .configurations-box-section p {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .metal-door-frame-config-section .configurations-box-section {
+        margin-bottom: 40px;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec h2 {
+        text-align: center;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec {
+        margin-top: 60px;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec p {
+        margin-bottom: 15px;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec .right-side {
+        display: none;
+    }
+
+    .metal-door-frame-config-section .width-requirement-sec h2 {
+        text-align: center;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec h4 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec .item-name {
+        padding: 14px 0;
+    }
+
+    .hollow-metal-door-hardware-section {
+        padding-bottom: 20px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec p,
+    .all-service-sections .commercial-emergency-service-sec p {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h2,
+    .all-service-sections .commercial-emergency-service-sec h2 {
+        text-align: center;
+    }
+
+    .all-service-sections .makes-model-service-sec ul {
+        column-count: 1;
+    }
+
+    .all-service-sections .makes-model-service-sec ul li {
+        font-size: 16px;
+        line-height: 24px;
+        background-size: 13px;
+        background-position: 0 6px;
+        padding-left: 22px;
+        margin-bottom: 12px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec .right-side {
+        margin-top: 0px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec .right-side h2 {
+        margin-bottom: 25px;
+    }
+
+    .all-service-sections .commercial-emergency-service-sec .left-side h2 {
+        margin-bottom: 20px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec .left-side {
+        display: none;
+    }
+
+    .all-service-sections .commercial-emergency-service-sec .right-side {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .loading-dock-banner-section.hollow-metal-door-banner-section .loading-dock-banner-content {
+        padding: 30px 30px 30px;
+        text-align: center;
+        width: 70%;
+    }
+
+    .loading-dock-banner-section.hollow-metal-door-banner-section .loading-dock-banner-content h2 {
+        padding: 0 0;
+    }
+
+    .inner-hollow-configurations-section .configurations-box-section article p {
+        font-size: 18px;
+        line-height: 21px;
+        margin-top: 15px;
+    }
+
+    .hollow-metal-door-handling-section h3::after {
+        margin: 16px auto 30px auto !important;
+    }
+
+    .hollow-metal-door-handling-section h3 {
+        font-size: 26px;
+        line-height: 33px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article h6 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article p {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article .text-content {
+        margin-top: 15px;
+    }
+
+    .double-door-section {
+        padding: 50px 0 50px;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section article h6 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section article p {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .metal-door-frames-sec .right-side {
+        padding-left: 15px;
+    }
+
+    .metal-door-frames-sec .right-side p {
+        padding-right: 0;
+    }
+
+    .metal-door-frame-config-section .configurations-headings-section p {
+        padding: 0 50px;
+    }
+
+    .metal-door-frame-config-section .configurations-box-section p {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec .item-name {
+        padding: 15px 0;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec h4 {
+        font-size: 18px;
+        line-height: 23px;
+        padding: 0 13px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec p,
+    .all-service-sections .commercial-emergency-service-sec p {
+        padding-right: 0px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h2::after,
+    .all-service-sections .commercial-emergency-service-sec h2::after {
+        margin: 15px 0 20px 0 !important;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h2,
+    .all-service-sections .commercial-emergency-service-sec h2 {
+        text-align: left;
+        font-size: 21px;
+        line-height: 24px;
+    }
+
+    .all-service-sections .makes-model-service-sec h2 {
+        padding: 0 100px;
+    }
+
+    .all-service-sections .makes-model-service-sec ul li {
+        font-size: 18px;
+        line-height: 28px;
+        background-position: 0 5px;
+    }
+
+    .hollow-metal-configurations-section.sandk-common-padding {
+        padding: 60px 0 !important;
+    }
+
+    .metal-door-frame-config-section.sandk-common-padding {
+        padding: 60px 0 0 !important;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h3,
+    .all-service-sections.sandk-inner-common h3,
+    .metal-door-frame-config-section h3,
+    .metal-door-frames-sec h3,
+    .hollow-metal-door-handling-section h3,
+    .inner-hollow-configurations-section h3,
+    .hollow-metal-doors-sec h3,
+    .hollow-metal-configurations-section h3 {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 32px;
+        margin-bottom: 15px;
+        color: rgb(0, 40, 85);
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h2,
+    .all-service-sections.sandk-inner-common h2,
+    .metal-door-frame-config-section h2,
+    .metal-door-frames-sec h2,
+    .hollow-metal-door-handling-section h2,
+    .inner-hollow-configurations-section h2,
+    .hollow-metal-doors-sec h2,
+    .hollow-metal-configurations-section h2 {
+        font-size: 34px;
+        line-height: 44px;
+        font-weight: 700;
+        color: #002855;
+        text-align: center;
+    }
+
+    /*loading-door*/
+    .work-with-your-app-section.work-sec.sandk-common-padding h2,
+    .work-with-your-app-section.inner-work-sec h2,
+    .service-all-loading-sec.sandk-common-padding h2{
+        font-size: 34px;
+        line-height: 44px;
+        margin-bottom: 25px;
+    }
+    .service-all-loading-sec.sandk-inner-common h2{
+        padding: 0px;
+    }
+    .work-with-your-app-section.work-sec.sandk-common-padding .loading-box-sec article h3,
+    .work-with-your-app-section.inner-work-sec.sandk-common .loading-box-sec article h3,
+    .service-all-loading-sec.sandk-common-padding .loading-box-sec article h3,
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 24px;
+        line-height: 34px;
+        margin: 15px 0;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 23px;
+        color: #002855;
+        font-weight: 700;
+        text-align: left;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3 br{
+        display: none;
+    }
+    .work-with-your-app-section .hollow-headings-section h2::after,
+    .service-all-loading-sec .loading-dock-accessories-sec h2::after,
+    .service-all-loading-sec .parts-section h2::after{
+        margin: 16px auto 35px auto !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .loading-dock-banner-section.hollow-metal-door-banner-section .loading-dock-banner-content {
+        padding: 30px 30px 30px;
+        text-align: center;
+        width: 60%;
+    }
+
+    .loading-dock-banner-section.hollow-metal-door-banner-section .loading-dock-banner-content h2 {
+        padding: 0 0;
+    }
+
+    .inner-hollow-configurations-section .configurations-box-section article p {
+        font-size: 18px;
+        line-height: 21px;
+        margin-top: 15px;
+    }
+
+    .hollow-metal-door-handling-section h3::after {
+        margin: 16px auto 30px auto !important;
+    }
+
+    .hollow-metal-door-handling-section h3 {
+        font-size: 26px;
+        line-height: 33px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article h6 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article p {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .hollow-metal-door-handling-section .single-door-box-section article .text-content {
+        margin-top: 15px;
+    }
+
+    .double-door-section {
+        padding: 50px 0 50px;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section article h6 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .hollow-metal-door-handling-section .double-door-box-section article p {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .metal-door-frames-sec .right-side {
+        padding-left: 15px;
+    }
+
+    .metal-door-frames-sec .right-side p {
+        padding-right: 0;
+    }
+
+    .metal-door-frame-config-section .configurations-headings-section p {
+        padding: 0 50px;
+    }
+
+    .metal-door-frame-config-section .configurations-box-section p {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec .item-name {
+        padding: 15px 0;
+    }
+
+    .hollow-metal-door-hardware-section .each-box .inner-sec h4 {
+        font-size: 18px;
+        line-height: 23px;
+        padding: 0 13px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec p,
+    .all-service-sections .commercial-emergency-service-sec p {
+        padding-right: 0px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h2::after,
+    .all-service-sections .commercial-emergency-service-sec h2::after {
+        margin: 15px 0 20px 0 !important;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h2,
+    .all-service-sections .commercial-emergency-service-sec h2 {
+        text-align: left;
+        font-size: 21px;
+        line-height: 24px;
+    }
+
+    .all-service-sections .makes-model-service-sec h2 {
+        padding: 0 100px;
+    }
+
+    .all-service-sections .makes-model-service-sec ul li {
+        font-size: 18px;
+        line-height: 28px;
+        background-position: 0 5px;
+    }
+
+    .all-service-sections .planned-maintenance-programme-sec h3,
+    .all-service-sections.sandk-inner-common h3,
+    .metal-door-frame-config-section h3,
+    .metal-door-frames-sec h3,
+    .hollow-metal-door-handling-section h3,
+    .inner-hollow-configurations-section h3,
+    .hollow-metal-doors-sec h3,
+    .hollow-metal-configurations-section h3 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        margin-bottom: 15px;
+        color: rgb(0, 40, 85);
+    }
+
+    .all-service-sections.sandk-inner-common h2 {
+        font-size: 38px;
+        line-height: 45px;
+    }
+    /*loading-door*/
+    .work-with-your-app-section.work-sec.sandk-common-padding h2,
+    .work-with-your-app-section.inner-work-sec h2,
+    .service-all-loading-sec.sandk-common-padding h2{
+        font-size: 38px;
+        line-height: 45px;
+        margin-bottom: 25px;
+    }
+    .service-all-loading-sec.sandk-inner-common h2{
+        padding: 0px;
+    }
+    .work-with-your-app-section.work-sec.sandk-common-padding .loading-box-sec article h3,
+    .work-with-your-app-section.inner-work-sec.sandk-common .loading-box-sec article h3,
+    .service-all-loading-sec.sandk-common-padding .loading-box-sec article h3,
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 28px;
+        line-height: 38px;
+        margin: 15px 0;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3{
+        font-size: 28px;
+        color: #002855;
+        font-weight: 700;
+        text-align: left;
+    }
+    .service-all-loading-sec .inner-loadind-repair h3 br{
+        display: none;
+    }
+    .work-with-your-app-section .hollow-headings-section h2::after,
+    .service-all-loading-sec .loading-dock-accessories-sec h2::after,
+    .service-all-loading-sec .parts-section h2::after{
+        margin: 16px auto 35px auto !important;
+    }
+
+}
