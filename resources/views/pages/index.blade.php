@@ -94,8 +94,8 @@
                                 
                             },
                             {
-                                data: 'author_user.name',
-                                name: 'author_user.name',
+                                data: 'author_name',
+                                name: 'author_name',
                             },
                             {
                                 data: 'formatted_published_at',

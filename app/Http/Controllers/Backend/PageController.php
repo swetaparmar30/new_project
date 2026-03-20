@@ -39,6 +39,7 @@ class PageController extends Controller
         $pages->transform(function ($item) use (&$counter) {
             $item['ser_id'] = $counter++;
             $item['parent_title'] = $item->parent ? $item->parent->title : '-';
+            $item['author_name'] = $item->authorUser ? $item->authorUser->name : '-';
             if($item->publish_status == 'Draft')
             {
                 $item['formatted_published_at'] = '<p class="date_p_class"><span class="date_draft_class">Draft</span></p>';  
@@ -67,7 +68,7 @@ class PageController extends Controller
         return view('pages.add', compact('page','parent'));
     }
     public function save(Request $request)
-    {
+     {
         // $slug = SlugService::createSlug(Page::class, 'slug', $request->page_slug);
         if(isset($request->page_id) && $request->page_id != '')
         {
