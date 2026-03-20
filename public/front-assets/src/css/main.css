@@ -2546,15 +2546,16 @@ p.home-banner-text {
 
 .garage-door-maintenance-sec .left-side-tab-items a.each-offer-item.active {
     background: linear-gradient(90deg, rgb(21 66 153 / .15) 0%, #fff0 100%);
-    border-left: 2px solid #000866;
+    border-left: 7px solid #000866;
     color: #000866;
 }
 
 .garage-door-maintenance-sec .left-side-tab-items a.each-offer-item:hover {
     background: linear-gradient(90deg, rgb(21 66 153 / .15) 0%, #fff0 100%);
-    border-left: 2px solid #000866;
+    border-left: 7px solid #000866;
     color: #000866;
 }
+
 
 .garage-door-maintenance-sec .left-side-tab-items a.each-offer-item.active h4 {
     color: #002855;
