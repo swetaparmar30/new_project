@@ -389,6 +389,23 @@ class SettingController extends Controller
                 'title2' => isset($request->title2) ? $request->title2 : '',
                 'title3' => isset($request->title3) ? $request->title3 : '',
                 'title4' => isset($request->title4) ? $request->title4 : '',
+                'system_setting_title_1' => isset($request->system_setting_title_1) ? $request->system_setting_title_1 : '',
+                'system_sub_title_1' => isset($request->system_sub_title_1) ? $request->system_sub_title_1 : '',
+                'system_setting_description_2' => isset($request->system_setting_description_2) ? $request->system_setting_description_2 : '',
+                'system_setting_description_3' => isset($request->system_setting_description_3) ? $request->system_setting_description_3 : '',
+                'system_img9' => isset($request->system_img9) ? $request->system_img9 : '',
+                'system_img5' => $request->system_img5 ?? '',
+                'system_img6' => $request->system_img6 ?? '',
+                'system_img7' => $request->system_img7 ?? '',
+                'system_img8' => $request->system_img8 ?? '',
+                'title5' => isset($request->title5) ? $request->title5 : '',
+                'title6' => isset($request->title6) ? $request->title6 : '',
+                'title7' => isset($request->title7) ? $request->title7 : '',
+                'title8' => isset($request->title8) ? $request->title8 : '',
+                
+        
+                
+
             ]);
         }
         if (isset($request->door_title_sec_checked) && $request->door_title_sec_checked != '' && $request->door_title_sec_checked == 'on') {
@@ -773,6 +790,21 @@ public function locationdata_store(Request $request)
             'title2' => isset($request->title2) ? $request->title2 : '',
             'title3' => isset($request->title3) ? $request->title3 : '',
             'title4' => isset($request->title4) ? $request->title4 : '',
+            'system_setting_title_1' => isset($request->system_setting_title_1) ? $request->system_setting_title_1 : '',
+            'system_sub_title_1' => isset($request->system_sub_title_1) ? $request->system_sub_title_1 : '',
+            'system_setting_description_2' => isset($request->system_setting_description_2) ? $request->system_setting_description_2 : '',
+            'system_setting_description_3' => isset($request->system_setting_description_3) ? $request->system_setting_description_3 : '',
+            'system_img9' => isset($request->system_img9) ? $request->system_img9 : '',
+            'system_img5' => $request->system_img5 ?? '',
+            'system_img6' => $request->system_img6 ?? '',
+            'system_img7' => $request->system_img7 ?? '',
+            'system_img8' => $request->system_img8 ?? '',
+            'title5' => isset($request->title5) ? $request->title5 : '',
+            'title6' => isset($request->title6) ? $request->title6 : '',
+            'title7' => isset($request->title7) ? $request->title7 : '',
+            'title8' => isset($request->title8) ? $request->title8 : '',
+            
+
         ]);
 
         $data['areas_sec'] = json_encode([

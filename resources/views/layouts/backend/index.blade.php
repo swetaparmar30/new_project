@@ -314,7 +314,10 @@
                     if (val == 'system_img' && val != 'undefined') {
                         $('#type_id').val(val);
                     }
-                    if ((val == 'system_img1' || val == 'system_img2' || val == 'system_img3' || val == 'system_img4') &&
+                    if (val == 'system_img9' && val != 'undefined') {
+                        $('#type_id').val(val);
+                    }
+                    if ((val == 'system_img1' || val == 'system_img2' || val == 'system_img3' || val == 'system_img4' || val == 'system_img5' || val == 'system_img6' || val == 'system_img7' || val == 'system_img8' ) &&
                         val != 'undefined') {
                         $('#type_id').val(val);
                     }
@@ -440,7 +443,21 @@
                     if (type_id == 'system_img4' && type_id != 'undefined' && type_id != '') {
                         var system_img4 = true;
                     }
-
+                    if (type_id == 'system_img9' && type_id != 'undefined' && type_id != '') {
+                        var system_img9 = true;
+                    }
+                    if (type_id == 'system_img5' && type_id != 'undefined' && type_id != '') {
+                        var system_img5 = true;
+                    }
+                    if (type_id == 'system_img6' && type_id != 'undefined' && type_id != '') {
+                       var system_img6 = true;
+                    }
+                    if (type_id == 'system_img7' && type_id != 'undefined' && type_id != '') {
+                        var system_img7 = true;
+                    }
+                    if (type_id == 'system_img8' && type_id != 'undefined' && type_id != '') {
+                        var system_img8 = true;
+                    }
                     if (type_id == 'why_choose_img1' && type_id != 'undefined' && type_id != '') {
                         var why_choose_img1 = true;
                     }
@@ -694,8 +711,26 @@
                                 $('#system_img_id4').val(details.id);
                                 $('#system_avtar4').attr('src', imageUrl);
                                 $('#remove_system_image4').css('display', 'block');
-
-
+                            } else if (system_img9) {
+                                $('#system_img9').val(details.id);
+                                $('#system_avtar9').attr('src', imageUrl);
+                                $('#remove_system_image9').css('display', 'block');
+                            } else if (system_img5) {
+                                $('#system_img5').val(details.id);
+                                $('#system_avtar5').attr('src', imageUrl);
+                                $('#remove_system_image5').css('display', 'block'); 
+                            } else if (system_img6) {
+                                $('#system_img6').val(details.id);
+                                $('#system_avtar6').attr('src', imageUrl);
+                                $('#remove_system_image6').css('display', 'block');
+                            } else if (system_img7) {
+                                $('#system_img7').val(details.id);
+                                $('#system_avtar7').attr('src', imageUrl);
+                                $('#remove_system_image7').css('display', 'block');
+                            } else if (system_img8) {
+                                $('#system_img8').val(details.id);
+                                $('#system_avtar8').attr('src', imageUrl);
+                                $('#remove_system_image8').css('display', 'block');
                             } else if (sec3_image_1) {
                                 $('#sec3_image_1').val(details.id);
                                 $('#sec3img1_banner_avtar').attr('src', imageUrl);

@@ -2746,8 +2746,41 @@
             $('#remove_system_image4').css('display', 'none');
             $('#system_avtar4').css('opacity', '1.0');
         });
-
-
+        $('#remove_system_image9').click(function(event) {
+            event.stopPropagation();
+            $('#system_img9').val(null);
+            $('#system_avtar9').attr('src', assetPath);
+            $('#remove_system_image9').css('display', 'none');
+            $('#system_avtar9').css('opacity', '1.0');
+        });
+        $('#remove_system_image5').click(function(event) {
+            event.stopPropagation();
+            $('#system_img5').val(null);
+            $('#system_avtar5').attr('src', assetPath);
+            $('#remove_system_image5').css('display', 'none');
+            $('#system_avtar5').css('opacity', '1.0');
+        });
+        $('#remove_system_image6').click(function(event) {
+            event.stopPropagation();
+            $('#system_img5').val(null);
+            $('#system_avtar6').attr('src', assetPath);
+            $('#remove_system_image6').css('display', 'none');
+            $('#system_avtar6').css('opacity', '1.0');
+        });
+         $('#remove_system_image7').click(function(event) {
+            event.stopPropagation();
+            $('#system_img7').val(null);
+            $('#system_avtar7').attr('src', assetPath);
+            $('#remove_system_image7').css('display', 'none');
+            $('#system_avtar7').css('opacity', '1.0');
+        });
+         $('#remove_system_image8').click(function(event) {
+            event.stopPropagation();
+            $('#system_img8').val(null);
+            $('#system_avtar8').attr('src', assetPath);
+            $('#remove_system_image8').css('display', 'none');
+            $('#system_avtar8').css('opacity', '1.0');
+        });
         $('#remove_why_choose_image1').click(function(event) {
             event.stopPropagation();
             $('#why_choose_img_id1').val(null);
