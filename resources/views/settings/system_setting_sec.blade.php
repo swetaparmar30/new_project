@@ -26,9 +26,19 @@
                     <span id="content_required" class="parsley-required" style="font-weight: 500 !important;"></span>
                 </div>
             </div>
+             <div class="row form-sec">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 label-sec">
+                    <label for="">Description</label>
+                </div>
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <textarea class="form-control rich-text-editor" id="system_setting_description_1" name="system_setting_description_1" style="height: 300px;"  data-parsley-errors-container="#content_required" data-parsley-required-message="Please Enter Description">{{ isset($system_setting->system_setting_description_1) ? $system_setting->system_setting_description_1 : '' }}</textarea>
+                    <span id="content_required" class="parsley-required" style="font-weight: 500 !important;"></span>
+                </div>
+            </div>
+
             <div class="row form-sec">
                 <label for="">Image </label>
-                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 label-sec">
+                 <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 label-sec">
                     <div class="upload-img-sec">
                         <input type="hidden" name="system_img" id="system_img_id" value="{{ isset($system_setting->system_img) ? $system_setting->system_img : '' }}">
                         @if(isset($system_setting->system_img) && $system_setting->system_img != '' && $system_setting->system_img != null)
