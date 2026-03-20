@@ -1185,6 +1185,8 @@ h2.about-history-h2.main_about_title:after {
     overflow: hidden;
     z-index: -1;
     background-color: #F1F1F1;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .year-of-excilence .center-side-list ul.with-icon-list li:nth-child(1) {
