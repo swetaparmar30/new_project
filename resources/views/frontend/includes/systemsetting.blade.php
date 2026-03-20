@@ -16,6 +16,12 @@
                     <img src="{{ asset('front-assets/src/images/51-Years-Of-Excellence.webp') }}"
                         class="img-fluid desktop-image" width="1000" height="592.88" alt="" loading="lazy">
                 @endif
+
+                @if(isset($system_setting->system_setting_description_1) && $system_setting->system_setting_description_1 != '')
+                    <div class="mt-3">
+                        {!! $system_setting->system_setting_description_1 !!}
+                    </div>
+                @endif
             </div>
 
             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 right-side">
