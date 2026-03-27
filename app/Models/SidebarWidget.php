@@ -11,6 +11,9 @@ use Illuminate\Support\Carbon;
 class SidebarWidget extends Model
 {
     use HasFactory, SoftDeletes, Userstamps;
+
+    protected $fillable = ['section_id', 'widget_id', 'sequence'];
+    protected $guarded = ['id'];
     public $timestamps = true;
     protected $userstamps = [
        'created_by' => 'created_by', 

@@ -428,4 +428,7 @@
         $('#profile_avtar').css('opacity', '1.0');
     });
 </script>
+<script>
+    const updateWidgetOrderUrl = "{{ route('page.update_widget_order') }}";
+</script>
 @endsection

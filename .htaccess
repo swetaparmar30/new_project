@@ -83,7 +83,7 @@ Redirect 301 /residential/uninsulated-garage-doors/styleview-collection-aluminum
 RewriteEngine On
 
 # Redirect multiple old paths to new path
-Redirect 301 /residential/classic-style-garage-doors/revival-wood-collection/ /residential/distinctions-series-custom-garage-doors/revival-wood-collection
+Redirect 301 /revival-wood-collection/ /residential/distinctions-series-custom-garage-doors/revival-wood-collection
 Redirect 301 /residential/farmhouse-style-garage-doors/revival-wood-collection/ /residential/distinctions-series-custom-garage-doors/revival-wood-collection
 Redirect 301 /residential/contemporary-style-garage-doors/revival-wood-collection/ /residential/distinctions-series-custom-garage-doors/revival-wood-collection
 Redirect 301 /residential/woodlook-garage-doors/revival-wood-collection/ /residential/distinctions-series-custom-garage-doors/revival-wood-collection

@@ -1,5 +1,4 @@
-@extends('layouts.backend.index')
-@section('main_content')
+<?php $__env->startSection('main_content'); ?>
 <div class="pcoded-wrapper">
     <div class="pcoded-content">
         <div class="pcoded-inner-content">
@@ -13,9 +12,9 @@
                     <div class="row">
                         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="page_title_heading">
-                                <h5>{{ isset($page->title) ? $page->title : '' }}</h5>
+                                <h5><?php echo e(isset($page->title) ? $page->title : ''); ?></h5>
                             </div>
-                            <input type="hidden" value="{{ $page->id }}" id="page_id">
+                            <input type="hidden" value="<?php echo e($page->id); ?>" id="page_id">
                         </div>
                         <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 cpl-sm-12 col-xs-12">
                             <div class="card Recent-Users">
@@ -24,67 +23,67 @@
                                 </div>
                                 <div class="builder-page-main-sec">
                                     <div class="section-list">
-                                        @if (isset($pagesections))
-                                        @foreach ($pagesections as $val)
-                                        <div class ="row p-10 full_section" id="section_{{ $val->id }}"
-                                            data-id="{{ $val->id }}">
+                                        <?php if(isset($pagesections)): ?>
+                                        <?php $__currentLoopData = $pagesections; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $val): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <div class ="row p-10 full_section" id="section_<?php echo e($val->id); ?>"
+                                            data-id="<?php echo e($val->id); ?>">
                                             <a class="black my-auto drag-layout">
                                                 <i class="feather icon-command"></i>
                                             </a>
-                                            @php
+                                            <?php
                                             if (isset($val->layout) && $val->layout != '') {
                                                 $rows = explode(',', $val->layout);
                                             }
-                                            @endphp
+                                            ?>
                                             <div class="row my-2 mx-0 col-11 bg-white layout-height">
-                                                @foreach ($rows as $index => $row)
-                                                <div class="col-{{ $row }} p-0 section-column"
+                                                <?php $__currentLoopData = $rows; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <div class="col-<?php echo e($row); ?> p-0 section-column"
                                                 style="border:1px solid"
-                                                data-order="{{ $index + 1 }}"
-                                                data-section-id="{{ $val->id }}">
-                                                @php
+                                                data-order="<?php echo e($index + 1); ?>"
+                                                data-section-id="<?php echo e($val->id); ?>">
+                                                <?php
                                                 $widget = App\Models\SectionWidget::where('sequence', $index + 1)
                                                 ->where('section_id', $val->id)
                                                 ->get();
-                                                @endphp
-                                                @if (isset($widget) && count($widget) > 0)
-                                                @foreach ($widget as $index2 => $val2)
-                                                @php
+                                                ?>
+                                                <?php if(isset($widget) && count($widget) > 0): ?>
+                                                <?php $__currentLoopData = $widget; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index2 => $val2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <?php
                                                 $title = $val2->widget;
-                                                @endphp
+                                                ?>
                                                 <div class="d-flex flex-row justify-content-between px-3 py-3 section-widget"
-                                                data-layout-widget-id ="{{ $val2->id }}">
-                                                <span>{{ isset($title->title) ? $title->title : '' }}</span>
+                                                data-layout-widget-id ="<?php echo e($val2->id); ?>">
+                                                <span><?php echo e(isset($title->title) ? $title->title : ''); ?></span>
                                                 <div class="widget-icons">
                                                     <a class="black editWidget"
-                                                    data-widget-name="{{ isset($title->title) ? $title->title : '' }}"
-                                                    data-id="{{ $val2->id }}"><i
+                                                    data-widget-name="<?php echo e(isset($title->title) ? $title->title : ''); ?>"
+                                                    data-id="<?php echo e($val2->id); ?>"><i
                                                     class="feather icon-settings mx-1"></i></a>
                                                     <a class="black removeWidget"
-                                                    data-id="{{ $val2->id }}"><i
+                                                    data-id="<?php echo e($val2->id); ?>"><i
                                                     class="feather icon-trash-2"></i></a>
                                                 </div>
                                             </div>
-                                            @endforeach
-                                            @endif
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                            <?php endif; ?>
                                         </div>
-                                        @endforeach
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </div>
                                     <a class="black my-auto edit-section set-sec-prop"
-                                    data-id="{{ $val->id }}">
+                                    data-id="<?php echo e($val->id); ?>">
                                     <i class="feather icon-settings"></i>
                                 </a>
                                 <a class="black my-auto ml-2 remove-section del-section"
-                                data-id="{{ $val->id }}">
+                                data-id="<?php echo e($val->id); ?>">
                                 <i class="feather icon-trash-2"></i>
                             </a>
                         </div>
-                        @endforeach
-                        @endif
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        <?php endif; ?>
                     </div>
-                    @if ($pagesections->isempty())
+                    <?php if($pagesections->isempty()): ?>
                     <p class="no-section-sec"> No Section Found </p>
-                    @endif
+                    <?php endif; ?>
                     <p class="no-section-sec" style="display:none"> No Section Found </p>
                 </div>
                 <div class="add-new-sec-button">
@@ -109,7 +108,7 @@
                 </div>
             </div>
             <form id="section-property-form" method="post">
-                @csrf
+                <?php echo csrf_field(); ?>
                 <input type="hidden" name="section_id" value="" id="prop-section_id">
                 <input type="hidden" name="page_id" value="" id="prop-page_id">
                 <div class="" id="properties-body">
@@ -190,9 +189,9 @@
                         class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 label-sec">
                         <div class="upload-img-sec">
                             <input type="hidden" name="sec_bg_img" id="main_sec_img"
-                            value="{{ isset($article->image) ? $article->image : '' }}">
+                            value="<?php echo e(isset($article->image) ? $article->image : ''); ?>">
                             <div class="image_preview_div">
-                                <img src="{{ asset('assets/images/user/img-demo_1041.jpg') }}"
+                                <img src="<?php echo e(asset('assets/images/user/img-demo_1041.jpg')); ?>"
                                 alt="" id="sec_avtar" class="profile-img"
                                 style="width:100px;">
                                 <a id="remove_main_sec_image"
@@ -252,7 +251,7 @@
         </div>
     </div>
 </div>
-<div id="blade-data" data-asset="{{ asset('uploads') }}"></div>
+<div id="blade-data" data-asset="<?php echo e(asset('uploads')); ?>"></div>
 <div class="text-right p-15">
     <button type="button" class="btn btn-primary"
     id="save_sec_prop">Save</button>
@@ -271,7 +270,7 @@
     </div>
 </div>
 <form id="widget-property-form" method="post">
-    @csrf
+    <?php echo csrf_field(); ?>
     <input type="hidden" name="section_id" value="" id="prop-section_id">
     <input type="hidden" name="page_id" value="" id="prop-page_id">
     <input type="hidden" name="main_widget_id" value="" id="widget_id">
@@ -312,31 +311,31 @@
     </div>
 </form>
 <div id="button_html" style="display: none">
-    @include('pages.widgets_html.button')
+    <?php echo $__env->make('pages.widgets_html.button', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </div>
 <div id="heading_html" style="display: none">
-    @include('pages.widgets_html.heading_tag')
+    <?php echo $__env->make('pages.widgets_html.heading_tag', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </div>
 <div id="image_html" style="display: none">
-    @include('pages.widgets_html.image')
+    <?php echo $__env->make('pages.widgets_html.image', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </div>
 <div id="text_editor_html" style="display: none">
-    @include('pages.widgets_html.text_editor')
+    <?php echo $__env->make('pages.widgets_html.text_editor', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </div>
 <div id="posts_html" style="display: none">
-    @include('pages.widgets_html.posts')
+    <?php echo $__env->make('pages.widgets_html.posts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </div>
 <div id="services_html" style="display: none">
-    @include('pages.widgets_html.services')
+    <?php echo $__env->make('pages.widgets_html.services', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </div>
 <div id="testimonials_html" style="display: none">
-    @include('pages.widgets_html.testimonials')
+    <?php echo $__env->make('pages.widgets_html.testimonials', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </div>
 <div id="our_gallery_html" style="display: none">
-    @include('pages.widgets_html.our_gallery')
+    <?php echo $__env->make('pages.widgets_html.our_gallery', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </div>
 <div id="contact_form_html" style="display: none">
-    @include('pages.widgets_html.contact_form')
+    <?php echo $__env->make('pages.widgets_html.contact_form', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </div>
 </div>
 <div class="card Recent-Users" id="widget-sec">
@@ -353,15 +352,15 @@
 <div class="collapse show" id="Widget_body">
     <div class="card-body">
         <div class="widget-list">
-            @if (isset($widgets))
-            @foreach ($widgets as $widget)
+            <?php if(isset($widgets)): ?>
+            <?php $__currentLoopData = $widgets; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $widget): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="widget-single flex-row justify-content-between px-3 py-3"
-            data-widget-id= "{{ $widget->id }}"
-            data-widget-name="{{ $widget->title }}">
-            <span>{{ $widget->title }}</span>
+            data-widget-id= "<?php echo e($widget->id); ?>"
+            data-widget-name="<?php echo e($widget->title); ?>">
+            <span><?php echo e($widget->title); ?></span>
         </div>
-        @endforeach
-        @endif
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        <?php endif; ?>
     </div>
 </div>
 </div>
@@ -376,17 +375,17 @@
 </div>
 </div>
 </div>
-@include('pages.modal')
-@endsection
+<?php echo $__env->make('pages.modal', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php $__env->stopSection(); ?>
 
-@section('script')
-<script src="{{ asset('assets/js/pagebuilder.js') }}"></script>
+<?php $__env->startSection('script'); ?>
+<script src="<?php echo e(asset('assets/js/pagebuilder.js')); ?>"></script>
 <script>
-    const updateWidgetOrderUrl = "{{ route('pages.update_widget_order') }}";
+    const updateWidgetOrderUrl = "<?php echo e(route('pages.update_widget_order')); ?>";
 </script>
 
 <script>
-    const assetPathnew = "{{ asset('assets/images/user/img-demo_1041.jpg') }}";
+    const assetPathnew = "<?php echo e(asset('assets/images/user/img-demo_1041.jpg')); ?>";
     $(document).on('click', '#remove_sec_image', function(event) {
         event.stopPropagation();
         $('#sec_img_id').val(null);
@@ -409,4 +408,6 @@
         $('#profile_avtar').css('opacity', '1.0');
     });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.backend.index', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\xampp\htdocs\new_project\resources\views/pages/builder_section.blade.php ENDPATH**/ ?>

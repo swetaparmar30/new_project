@@ -368,6 +368,7 @@ Route::prefix('admin')->group(function () {
     Route::post('page-builder-sections-delete', [PageController::class, 'page_sec_delete'])->name('pages.page_sec_delete')->middleware(['auth', 'role:administrator,marketing']);
     Route::post('page-builder-sections-prop-store', [PageController::class, 'page_sec_prop_store'])->name('pages.page_sec_prop_store')->middleware(['auth', 'role:administrator,marketing']);
     Route::post('page-builder-sections-change-order', [PageController::class, 'page_sec_change_order'])->name('pages.page_sec_change_order')->middleware(['auth', 'role:administrator,marketing']);
+    Route::post('update-widget-order', [PageController::class, 'update_widget_order'])->name('pages.update_widget_order')->middleware(['auth', 'role:administrator,marketing']); 
 
     // Section Widgets
 
@@ -375,7 +376,9 @@ Route::prefix('admin')->group(function () {
     Route::post('section-widget-delete', [WidgetController::class, 'sec_widget_delete'])->name('pages.sec_widget_delete')->middleware(['auth', 'role:administrator,marketing']);
     Route::post('section-widget-prop-store', [WidgetController::class, 'sec_widget_prop_store'])->name('pages.sec_widget_prop_store')->middleware(['auth', 'role:administrator,marketing']);
     Route::post('section-widget-prop-get', [WidgetController::class, 'sec_widget_prop_get'])->name('pages.sec_widget_prop_get')->middleware(['auth', 'role:administrator,marketing']);
-    // Route::post('section-widget-change-order', [PageController::class, 'sec_widget_update_order'])->name('pages.sec_widget_update_order')->middleware('auth');
+    Route::post('section-widget-change-order', [PageController::class, 'sec_widget_update_order'])->name('pages.sec_widget_update_order')->middleware('auth');
+    
+
 
     // Home page setting 
 

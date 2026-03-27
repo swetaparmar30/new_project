@@ -250,5 +250,20 @@ class PageController extends Controller
         return response()->json(['message' => 'Section Sorted Successfully.']);
     }
 
+        public function update_widget_order(Request $request)
+    {
+        $widgets = $request->widgets;
     
+        foreach ($widgets as $widget) {
+
+            SectionWidget::where('id', $widget['id'])
+                ->update([
+                    'sequence'   => $widget['sequence'],
+                    'section_id' => $widget['section_id'], 
+                ]);
+        }
+
+        return response()->json(['message' => 'Widgets updated successfully']);
+    }
+
 }

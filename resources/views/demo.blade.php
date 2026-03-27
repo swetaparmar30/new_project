@@ -53,7 +53,9 @@
                                                 $title = $val2->widget;
                                                 @endphp
                                                 <div class="d-flex flex-row justify-content-between px-3 py-3 section-widget"
-                                                data-layout-widget-id ="{{ $val2->id }}">
+                                                data-layout-widget-id ="{{ $val2->id }}"
+                                                data-widget-id="{{ $val2->widget_id }}"
+                                                data-section-id="{{ $val->id }}">
                                                 <span>{{ isset($title->title) ? $title->title : '' }}</span>
                                                 <div class="widget-icons">
                                                     <a class="black editWidget"

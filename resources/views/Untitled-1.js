@@ -70,7 +70,6 @@ function makeLayout(layout, section_id, layout_ids) {
     },
 });
     // droppableAndSortableInit();
-    initSortable();
 };
 
 $(document).on('input', '#color-picker-id', function(e) {
@@ -253,10 +252,7 @@ function saveWidget(data, widget, section) {
         success: function(response) {
             toastr.success(response.message, 'Success');
             appendWidgetToLayout(widget, section, response.data.id, response.title);
-            //updateWidgetOrder(data.order);
-            setTimeout(function () {
-            updateWidgetOrder();
-            }, 100);
+            // updateWidgetOrder(data.order);
         },
         error: function(xhr, status, error) {
             let message = "Widget Adding Request Failed";
@@ -281,7 +277,6 @@ function appendWidgetToLayout(widget, section, id, title) {
                         <a  class="black removeWidget" data-id="${id}"><i class="feather icon-trash-2"></i></a>
                     </div>`;
         $(widget).append(actionMarkup);
-         initSortable();
     };
 
 
@@ -921,74 +916,73 @@ $(document).on('input', '#contact-background-color-picker-id', function(e) {
     var colorValue = $(this).val();
     $('#contact-background-color-id').val(colorValue);
 });
-        function updateWidgetOrder() {
-            let widgets = [];
+function updateWidgetOrder() {
+    let widgets = [];
 
-        $('.full_section').each(function () {
+    $('.section-column').each(function() {
+        let section_id = $(this).data('section-id');
 
-            let sectionId = $(this).data('id');
+        $(this).find('.section-widget').each(function(index) {
+            widgets.push({
+                id: $(this).data('layout-widget-id'),
+                sequence: index + 1,
+                section_id: section_id
+            });
+        });
+    });
 
-            console.log('---------------- Section:', sectionId);
+    $.ajax({
+        url: updateWidgetOrderUrl,
+        type: "POST",
+        data: JSON.stringify({ widgets: widgets }),
+        contentType: "application/json",
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function(res) {
+            console.log(res.message);
+        },
+        error: function(err) {
+            console.error('Error updating order:', err.responseText);
+        }
+    });
+}
 
-            $(this).find('.section-column').each(function (colIndex) {
+$('.section-column').sortable({
+    connectWith: '.section-column',
+    placeholder: 'widget-placeholder',
+    stop: function (event, ui) {
 
-                console.log(' Column:', colIndex + 1);
+        let widgets = [];
 
-                $(this).find('.section-widget').each(function (widgetIndex) {
+        $('.section-column').each(function () {
 
-                    let widgetId = $(this).data('layout-widget-id');
+            let sectionId = $(this).data('section-id');
 
-                    let widgetData = {
-                        id: widgetId,
-                        section_id: sectionId,
-                        sequence: colIndex + 1 // column index
-                    };
+            $(this).find('.section-widget').each(function (index) {
 
-                    console.log('  Widget:', widgetData);
-
-                    widgets.push(widgetData);
-
+                widgets.push({
+                    id: $(this).data('layout-widget-id'),
+                    section_id: sectionId,
+                    sequence: index + 1
                 });
 
             });
 
         });
 
-        console.log('FINAL:', widgets);
-
-            $.ajax({
-                url: updateWidgetOrderUrl,
-                type: "POST",
-                data: JSON.stringify({ widgets: widgets }),
-                contentType: "application/json",
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-            
-                success: function(response) {
-                    toastr.success(response.message, 'Success');
-                },
-
-                error: function(xhr, status, error) {
-                    let message = "Widget Adding Request Failed";
-                    if (xhr.responseJSON) {
-                        message = xhr.responseJSON.message;
-                    }
-                    toastr.error(message, 'ERROR!!');
-                }
-            });
-        }
-
-        function initSortable() {
-            $('.section-column').sortable({
-                connectWith: '.section-column',
-                placeholder: 'widget-placeholder',
-                stop: function () {
-                    updateWidgetOrder();
-                }
-            }).disableSelection();
-        }
-
-        $(document).ready(function () {
-            initSortable();
+        // AJAX call
+        $.ajax({
+            url: updateWidgetOrderUrl,
+            method: "POST",
+            data: {
+                widgets: widgets,
+                _token: $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (res) {
+                console.log('Updated!');
+            }
         });
+
+    }
+});
