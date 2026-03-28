@@ -1,6 +1,6 @@
 <?php $__env->startSection('main_content'); ?>
 <div class="pcoded-wrapper">
-       <div class="pcoded-content">
+   <div class="pcoded-content">
       <div class="pcoded-inner-content">
          <div class="main-body">
             <div class="page-wrapper">
@@ -8,8 +8,8 @@
                   <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                      <div class="card Recent-Users mb-4">
                         <div class="card-header">
-                           <h5>Garage Doors</h5>
-                           <a href="<?php echo e(route('garage-doors.add')); ?>" class="add-article-btn">Add Garage Door</a>
+                           <h5>Client Logo</h5>
+                           <a href="<?php echo e(route('client-logo.add')); ?>" class="add-article-btn">Add Client Logo</a>
                         </div>
                         <div class="card-body">
                            <div class="example">
@@ -19,9 +19,8 @@
                                        <thead>
                                           <tr class="unread">
                                              <th scope="col">#</th>
-                                             <th scope="col">Title</th>
-                                             <th scope="col">Subtitle</th>
-                                             <th scope="col">Description</th>
+                                             <th scope="col">Image</th>
+                                             <th scope="col">Status</th>
                                              <th scope="col">Action</th>
                                           </tr>
                                        </thead>
@@ -59,29 +58,26 @@
            autoWidth: false,
            columnDefs: [
                { 
-                    targets: [0,4],
+                   targets: [0, 3],
                     orderable: false,
                },
                {
-                   width: '5%', targets: 0 
+                   width: '1%', targets: 0 
                },
                {
-                   width: '20%', targets: 1 
+                   width: '10%', targets: 1 
                },
                {
-                   width: '20%', targets: 2 
+                   width: '19%', targets: 2 
                },
                {
-                   width: '35%', targets: 3 
-               },
-               {
-                   width: '10%', targets: 4
+                   width: '10%', targets: 3 
                }
-               
+            
               
            ],
            ajax: {
-               url: admin_url + "list-garage-doors",
+               url: admin_url + "list-client-logo",
                type: 'post',
                data: {
                    _token: token,
@@ -93,21 +89,19 @@
                    name: 'id'
                },
                {
-                   data: 'title',
-                   name: 'title'
+                   data: 'image',
+                   name: 'image'
                },
                {
-                   data: 'subtitle',
-                   name: 'subtitle'
+                   data: 'status',
+                   name: 'status'
                },
-               {
-                   data: 'description',
-                   name: 'description'
-               },
+                
                {
                    data: 'action',
                    name: 'Action'
-               }    
+               }
+               
            ]
        });
    })
@@ -131,6 +125,28 @@
            }
        });
    });
+$(document).on('click', '#is_featured', function() {
+    var token = $("meta[name='csrf-token']").attr("content");
+    var id = $(this).attr("data-id");
+    var isChecked = $(this).is(':checked');
+    $.ajax({
+        url: '<?php echo e(route('client_logo.status')); ?>',
+        type: "post",
+        data: {
+            _token: token,
+            isChecked: isChecked,
+            id: id,
+        },
+        success: function(data) {
+            if (data.status == 2) {
+                toastr.success(data.message);
+            } else if (data.status == 1) {
+                toastr.success(data.message);
+            }
+
+        }
+    });
+});
 </script>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.backend.index', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\xampp\htdocs\new_project\resources\views/garage-doors/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.backend.index', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\xampp\htdocs\new_project\resources\views/client-logo/index.blade.php ENDPATH**/ ?>

@@ -275,6 +275,12 @@
                                     class="feather icon-user"></i></span><span class="pcoded-mtext">Inquiry
                                 (Leads)</span></a>
                     </li>
+                    <li data-username="dashboard"
+                        class="nav-item <?php echo e(\Request::route()->getName() == 'newsletters.index' ? 'active' : ''); ?>">
+                        <a href="<?php echo e(route('newsletters.index')); ?>" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-user"></i></span><span class="pcoded-mtext">NewSletters
+                                </span></a>
+                    </li>
                 <?php endif; ?>
             </ul>
         </div>

@@ -1,6 +1,6 @@
 <?php $__env->startSection('main_content'); ?>
 <div class="pcoded-wrapper">
-       <div class="pcoded-content">
+   <div class="pcoded-content">
       <div class="pcoded-inner-content">
          <div class="main-body">
             <div class="page-wrapper">
@@ -8,8 +8,8 @@
                   <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                      <div class="card Recent-Users mb-4">
                         <div class="card-header">
-                           <h5>Garage Doors</h5>
-                           <a href="<?php echo e(route('garage-doors.add')); ?>" class="add-article-btn">Add Garage Door</a>
+                           <h5>Faqs</h5>
+                           <a href="<?php echo e(route('faqs.add')); ?>" class="add-article-btn">Add Faq</a>
                         </div>
                         <div class="card-body">
                            <div class="example">
@@ -20,7 +20,6 @@
                                           <tr class="unread">
                                              <th scope="col">#</th>
                                              <th scope="col">Title</th>
-                                             <th scope="col">Subtitle</th>
                                              <th scope="col">Description</th>
                                              <th scope="col">Action</th>
                                           </tr>
@@ -59,29 +58,26 @@
            autoWidth: false,
            columnDefs: [
                { 
-                    targets: [0,4],
+                   targets: [0, 3],
                     orderable: false,
                },
                {
-                   width: '5%', targets: 0 
+                   width: '1%', targets: 0 
                },
                {
-                   width: '20%', targets: 1 
+                   width: '18%', targets: 1 
                },
                {
-                   width: '20%', targets: 2 
+                   width: '28%', targets: 2 
                },
-               {
-                   width: '35%', targets: 3 
-               },
-               {
-                   width: '10%', targets: 4
+                {
+                   width: '5%', targets: 3 
                }
                
               
            ],
            ajax: {
-               url: admin_url + "list-garage-doors",
+               url: admin_url + "list-faqs",
                type: 'post',
                data: {
                    _token: token,
@@ -97,17 +93,14 @@
                    name: 'title'
                },
                {
-                   data: 'subtitle',
-                   name: 'subtitle'
-               },
-               {
                    data: 'description',
                    name: 'description'
                },
                {
                    data: 'action',
                    name: 'Action'
-               }    
+               }
+               
            ]
        });
    })
@@ -118,7 +111,7 @@
        var deleteUrl = $(this).data('href');
        Swal.fire({
            title: 'Are you sure?',
-           text: 'You are about to delete the Garage Door!',
+           text: 'You are about to delete the Faq!',
            icon: 'warning',
            showCancelButton: true,
            confirmButtonColor: '#3085d6',
@@ -133,4 +126,4 @@
    });
 </script>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.backend.index', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\xampp\htdocs\new_project\resources\views/garage-doors/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.backend.index', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\xampp\htdocs\new_project\resources\views/faqs/index.blade.php ENDPATH**/ ?>

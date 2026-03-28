@@ -286,6 +286,12 @@
                                     class="feather icon-user"></i></span><span class="pcoded-mtext">Inquiry
                                 (Leads)</span></a>
                     </li>
+                    <li data-username="dashboard"
+                        class="nav-item {{ \Request::route()->getName() == 'newsletters.index' ? 'active' : '' }}">
+                        <a href="{{ route('newsletters.index') }}" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-user"></i></span><span class="pcoded-mtext">NewSletters
+                                </span></a>
+                    </li>
                 @endif
             </ul>
         </div>

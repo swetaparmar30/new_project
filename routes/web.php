@@ -36,7 +36,7 @@ use App\Http\Controllers\Backend\HollowMetalDoorsController;
 use App\Http\Controllers\Backend\ServiceAreaController;
 use App\Http\Controllers\Frontend\PageController as FrontendPageController;
 use App\Http\Controllers\Backend\SitemapController;
-
+use App\Http\Controllers\NewsletterController;
 /*
 
 |--------------------------------------------------------------------------
@@ -445,6 +445,13 @@ Route::prefix('admin')->group(function () {
         Route::post('update', 'save')->name('add');
     });
 
+    Route::get('newsletters',[NewsletterController::class,'index'])->name('newsletters.index')->middleware(['auth', 'role:administrator']);
+    Route::get('list-newsletters', [NewsletterController::class, 'list'])->name('list-newsletters')->middleware(['auth', 'role:administrator']);
+    Route::get('newsletters-add',[NewsletterController::class,'add'])->name('newsletters-add')->middleware(['auth', 'role:administrator']);
+    Route::post('newsletters-store',[NewsletterController::class,'store'])->name('newsletters.store')->middleware(['auth', 'role:administrator']);
+    Route::post('newsletters-status',[NewsletterController::class,'status'])->name('newsletters.status')->middleware(['auth', 'role:administrator']);
+    Route::get('newsletters-edit',[NewsletterController::class,'edit'])->name('newsletters.edit')->middleware(['auth', 'role:administrator']);
+    Route::get('newsletters-delete/{id}', [NewsletterController::class, 'delete'])->name('newsletters.delete')->middleware(['auth', 'role:administrator']);
 
 });
 
