@@ -267,7 +267,7 @@
         <div class="container-md">
             <div class="row align-items-center">
                 <div class="row align-items-center flex-lg-row-reverse">
-                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 left-side">
+                {{-- <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 left-side">
                     @if (isset($system_setting->system_img9) && $system_setting->system_img9 != null)
                         @php
                             $img = App\Models\MediaImage::where('id', $system_setting->system_img9)->first();
@@ -287,7 +287,7 @@
                             {!! $system_setting->system_setting_description_2 !!}
                         </div>
                     @endif
-                </div>
+                </div> --}}
 
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 right-side">
 

@@ -255,7 +255,7 @@ function saveWidget(data, widget, section) {
             appendWidgetToLayout(widget, section, response.data.id, response.title);
             //updateWidgetOrder(data.order);
             setTimeout(function () {
-            updateWidgetOrder();
+            //updateWidgetOrder();
             }, 100);
         },
         error: function(xhr, status, error) {

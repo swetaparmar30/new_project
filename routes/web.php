@@ -83,6 +83,7 @@ Route::get('/commercial/{slug}/{slug2}/{slug3}', [App\Http\Controllers\Frontend\
 
 Route::get('/locations/hastings-garage-doors', [App\Http\Controllers\HomeController::class, 'hastings'])->name('hastings.garagedoor');
 Route::get('/locations/lincoln-garage-doors', [App\Http\Controllers\HomeController::class, 'lincoln'])->name('lincoln.garagedoor');
+Route::get('/locations/demo-garage-doors', [App\Http\Controllers\HomeController::class, 'demo'])->name('demo.garagedoor');
 
 
 

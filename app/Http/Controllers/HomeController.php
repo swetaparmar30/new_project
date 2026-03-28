@@ -77,7 +77,8 @@ class HomeController extends Controller
         $testimonial = json_decode($home->testimonial);
         $blog_sec = json_decode($home->blog_sec);
         $Resicollections = Collection::select('*')->where('deleted_at', null)->where('type', 'Residential')->latest()->limit(4)->get();
-        $garage_doors = GarageDoor::select('*')->where('deleted_at', null)->get();
+        //$garage_doors = GarageDoor::select('*')->where('deleted_at', null)->get();
+        $garage_doors = GarageDoor::where('deleted_at',null)->where('pages', 'home')->get();
         $garage_services = Garageservice::select('*')->where('deleted_at', null)->take(6)->get();
         $gallery_images = ProjectGallery::where('is_publish', 1)->where('is_featured', 1)->latest()->get();
         $faq_data = Faq::orderBy('updated_at', 'asc')->get();
@@ -118,7 +119,8 @@ class HomeController extends Controller
         $quote = json_decode($location->quote_sec);
         $calltoaction = json_decode($location->calltoaction);
         $Resicollections = Collection::select('*')->where('deleted_at', null)->where('type', 'Residential')->latest()->limit(4)->get();
-        $garage_doors = GarageDoor::select('*')->where('deleted_at', null)->get();
+        //$garage_doors = GarageDoor::select('*')->where('deleted_at', null)->get();
+        $garage_doors = GarageDoor::where('deleted_at',null)->where('pages', 'services')->get();
         $garage_services = Garageservice::select('*')->where('deleted_at', null)->take(6)->get();
         $gallery_images = ProjectGallery::where('is_publish', 1)->where('is_featured', 1)->latest()->get();
         $faq_data = Faq::orderBy('updated_at', 'asc')->get();
@@ -162,6 +164,40 @@ class HomeController extends Controller
 
 
 
+    public function demo()
+    {
+        $location = LocationPageSetting::where('location', 'demo')->first();
+        $home = HomePageSetting::first();
+        $meta_tags = json_decode($location->meta_tags_sec);
+        $checked = $meta_tags->checked ?? 0;
+
+        $meta_title = $checked ? ($meta_tags->meta_title ?? null) : null;
+        $meta_description = $checked ? ($meta_tags->meta_description ?? null) : null;
+        $meta_keywords = $checked ? ($meta_tags->meta_keyword ?? null) : null;
+
+        $banner = json_decode($location->banner_sec);
+        $system_setting = json_decode($location->system_setting_sec);
+        $services_sec = json_decode($location->services_sec);
+        $service_head_sec = json_decode($location->service_heading_section);
+        $areas = json_decode($location->areas_sec);
+        $faqs = json_decode($location->faq_sec);
+        $garage_door = json_decode($location->garage_door);
+        $residential = json_decode($home->residential_sec);
+        $gallery = json_decode($home->gallery_sec);
+        $newgarage = json_decode($home->newgarage);
+        $testimonial = json_decode($home->testimonial);
+        $blog_sec = json_decode($home->blog_sec);
+        $why_choose = json_decode($location->why_choose_sec);
+        $quote = json_decode($location->quote_sec);
+        $calltoaction = json_decode($location->calltoaction);
+        $Resicollections = Collection::select('*')->where('deleted_at', null)->where('type', 'Residential')->latest()->limit(4)->get();
+        $garage_doors = GarageDoor::select('*')->where('deleted_at', null)->get();
+        $garage_services = Garageservice::select('*')->where('deleted_at', null)->take(6)->get();
+        $gallery_images = ProjectGallery::where('is_publish', 1)->where('is_featured', 1)->latest()->get();
+        $faq_data = Faq::orderBy('updated_at', 'asc')->get();
+        $blogs = Article::where('status', 1)->latest()->take(3)->get();
+        return view('frontend.landing_page.location-page', compact('home', 'garage_services', 'testimonial', 'newgarage', 'banner', 'system_setting', 'services_sec', 'service_head_sec', 'faqs', 'garage_door', 'faq_data', 'gallery', 'residential', 'garage_doors', 'gallery_images', 'Resicollections', 'blogs', 'blog_sec', 'meta_title', 'meta_description', 'meta_keywords', 'areas', 'why_choose', 'quote', 'calltoaction', 'meta_tags'));
+    }
 
 
 

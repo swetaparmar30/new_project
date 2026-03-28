@@ -28,7 +28,7 @@
 @endif
 
 
-{{-- @include('frontend.includes.services-sec') --}}
+@include('frontend.includes.services-sec')
 
 
 

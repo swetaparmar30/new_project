@@ -23,7 +23,7 @@ class GarageDoorController extends Controller
 
     public function store(Request $request) {
 
-
+        //dd($request->all());
         $id = $request->garage_door_id;
         $uploaded_video = null;
 
@@ -60,6 +60,7 @@ class GarageDoorController extends Controller
         $garage_door->subtitle = $request->subtitle ?? '';
         $garage_door->button = $request->button ?? '';
         $garage_door->button_url = $request->button_url ?? '';
+        $garage_door->pages = $request->page_slug ?? '';
         $garage_door->image = $request->img_id ?? '';
 
         if ($uploaded_video) {

@@ -25842,3 +25842,31 @@ a[data-bs-target="#locationcontact"] {
         background-position: 0 10px;
     }
 }
+
+.heading_text {
+    font-size: 50px;
+    line-height: 30px;
+    color: #002855;
+    font-weight: 700;
+   padding-top: 30px;
+
+}
+.custom-css{
+    padding-top: 20px;
+}
+
+.custom-design{
+
+}
+.custom-gallery-title-class{
+    font-size: 50px;
+    line-height: 40px;
+    color: #002855;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding-top: 30px;  
+}
+.custom-gallery-sub-title-class{
+    padding-bottom: 20px;
+    color: #002855;
+}

@@ -1,5 +1,4 @@
-@extends('layouts.backend.index')
-@section('main_content')
+<?php $__env->startSection('main_content'); ?>
 <div class="pcoded-wrapper">
    <div class="pcoded-content">
       <div class="pcoded-inner-content">
@@ -8,19 +7,19 @@
          <div class="main-body">
             <div class="page-wrapper">
                <!-- [ Main Content ] start -->
-               <form action="{{ route('garage-doors.store') }}" method="POST" data-parsley-validate=""
+               <form action="<?php echo e(route('garage-doors.store')); ?>" method="POST" data-parsley-validate=""
                   enctype="multipart/form-data">
-                  @csrf
-                  <input type="hidden" id="garage_door_id" name="garage_door_id" value=" {{ isset($garage->id) ? $garage->id : '' }} ">
+                  <?php echo csrf_field(); ?>
+                  <input type="hidden" id="garage_door_id" name="garage_door_id" value=" <?php echo e(isset($garage->id) ? $garage->id : ''); ?> ">
                   <div class="row">
                      <div
                         class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 cpl-sm-12 col-xs-12 add-article form-main-sec ">
                         <div class="card Recent-Users">
-                           @if (isset($garage) && $garage != '')
+                           <?php if(isset($garage) && $garage != ''): ?>
                            <h5>Edit Garage Door</h5>
-                           @else
+                           <?php else: ?>
                            <h5>Add Garage Door</h5>
-                           @endif
+                           <?php endif; ?>
                            <div class="card-block px-0 py-3">
                               <div class="row form-sec">
                                  <div
@@ -31,7 +30,7 @@
                                     <input type="text" class="form-control" id="title" name="title" required
                                        data-parsley-required-message="Please Enter Title"
                                        placeholder="Title"
-                                       value="{{ isset($garage->title) ? $garage->title : '' }}">
+                                       value="<?php echo e(isset($garage->title) ? $garage->title : ''); ?>">
                                  </div>
                               </div>
 
@@ -44,7 +43,7 @@
                                     <input type="text" class="form-control" id="subtitle" name="subtitle" required
                                        data-parsley-required-message="Please Enter Subtitle"
                                        placeholder="Sub Title"
-                                       value="{{ isset($garage->subtitle) ? $garage->subtitle : '' }}">
+                                       value="<?php echo e(isset($garage->subtitle) ? $garage->subtitle : ''); ?>">
                                  </div>
                               </div>
                              
@@ -58,7 +57,7 @@
                                     <textarea  name="description" data-parsley-required="true"
                                        class="form-control rich-text-editor" id="description"
                                        data-parsley-required-message="Please Enter Description"
-                                       data-parsley-errors-container="#content_required"> {{ isset($garage->description) ? $garage->description : '' }} </textarea>
+                                       data-parsley-errors-container="#content_required"> <?php echo e(isset($garage->description) ? $garage->description : ''); ?> </textarea>
                                     <span class="error_field" id="content_required"></span>
                                  </div>
                               </div>
@@ -73,7 +72,7 @@
                                     <textarea name="bullets" data-parsley-required="true"
                                        class="form-control rich-text-editor" id="bullets"
                                        data-parsley-required-message="Please Enter Description"
-                                       data-parsley-errors-container="#content_required1">{{ isset($garage->bullets) ? $garage->bullets : '' }}</textarea>
+                                       data-parsley-errors-container="#content_required1"><?php echo e(isset($garage->bullets) ? $garage->bullets : ''); ?></textarea>
                                     <span class="error_field" id="content_required1"></span>
                                  </div>
                               </div>
@@ -87,7 +86,7 @@
                                     <input type="text" class="form-control" id="button" name="button" required
                                        data-parsley-required-message="Please Enter Button Name"
                                        placeholder="Button Name"
-                                       value="{{ isset($garage->button) ? $garage->button : '' }}">
+                                       value="<?php echo e(isset($garage->button) ? $garage->button : ''); ?>">
                                  </div>
                               </div>
 
@@ -100,20 +99,20 @@
                                     <input type="text" class="form-control" id="button_url" name="button_url"
                                        data-parsley-required-message="Please Enter Button Url"
                                        placeholder="Button Url"
-                                       value="{{ isset($garage->button_url) ? $garage->button_url : '' }}">
+                                       value="<?php echo e(isset($garage->button_url) ? $garage->button_url : ''); ?>">
                                  </div>
                               </div>
                            
                               
-                              {{-- Page Wise Dropdown --}}
+                              
                                  <div class="row form-sec">
                                     <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 label-sec">
                                        <label>Page Wise <span style="color: red;">*</span></label>
                                     </div>
 
-                                    @php
+                                    <?php
                                        $pageSlug = old('page_slug', isset($garage->pages) ? $garage->pages : '');
-                                    @endphp
+                                    ?>
 
                                     <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
                                        <select class="form-control" name="page_slug" id="page_slug" required
@@ -121,9 +120,9 @@
 
                                              <option value="">-- Select Page --</option>
 
-                                             <option value="home" {{ $pageSlug == 'home' ? 'selected' : '' }}>Home</option>
+                                             <option value="home" <?php echo e($pageSlug == 'home' ? 'selected' : ''); ?>>Home</option>
 
-                                             <option value="services" {{ $pageSlug == 'services' ? 'selected' : '' }}>Services</option>
+                                             <option value="services" <?php echo e($pageSlug == 'services' ? 'selected' : ''); ?>>Services</option>
 
                                        </select>
                                     </div>
@@ -146,21 +145,21 @@
                                         <div class="row form-sec">
                                             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 label-sec">
                                                 <input type="hidden"
-                                                    value="{{ isset($garage->image) ? $garage->image : '' }}"
+                                                    value="<?php echo e(isset($garage->image) ? $garage->image : ''); ?>"
                                                     name="img_id" id="img_id" required data-parsley-errors-container="#logo_required" data-parsley-trigger="change" data-parsley-required-message="Please Choose an Image.">
                                                 <div class="upload-img-sec text-center image_preview_div">
-                                                    @if (isset($image_name->name) && $image_name->name != '')
-                                                    <img src="{{ asset('uploads/' . $image_name->name) }}" alt=""
+                                                    <?php if(isset($image_name->name) && $image_name->name != ''): ?>
+                                                    <img src="<?php echo e(asset('uploads/' . $image_name->name)); ?>" alt=""
                                                         class="img-fluid profile_avtar" id="profile_avtar"
                                                         style="width:125px;height:125px;">
                                                     <a id="remove_image"> <i class="fa fa-times"
                                                             aria-hidden="true"></i></a>
-                                                    @else
-                                                    <img src="{{ asset('assets/images/user/img-demo_1041.jpg') }}" alt=""
+                                                    <?php else: ?>
+                                                    <img src="<?php echo e(asset('assets/images/user/img-demo_1041.jpg')); ?>" alt=""
                                                         id="profile_avtar" class="profile-img">
                                                     <a id="remove_image" style="display: none;"> <i class="fa fa-times"
                                                             aria-hidden="true"></i></a>
-                                                    @endif
+                                                    <?php endif; ?>
                                                     <label for="file" style="cursor: pointer;"
                                                         class="form-label upload_image choose_file hm-choose-img-title">Choose image</label>
                                                 </div>
@@ -178,10 +177,10 @@
       </div>
    </div>
 </div>
-@endsection
-@section('script')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
 <script>
-const assetPath = "{{ asset('assets/images/user/img-demo_1041.jpg') }}";
+const assetPath = "<?php echo e(asset('assets/images/user/img-demo_1041.jpg')); ?>";
 $('#remove_image').click(function(event) {
     event.stopPropagation();
     $('#img_id').val(null);
@@ -232,4 +231,5 @@ $('#remove_image').click(function(event) {
        });
    });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.backend.index', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\xampp\htdocs\new_project\resources\views/garage-doors/add.blade.php ENDPATH**/ ?>

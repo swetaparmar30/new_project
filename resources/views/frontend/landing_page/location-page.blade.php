@@ -21,10 +21,10 @@
         @if (isset($system_setting->checked) && $system_setting->checked == 1)
             @include('frontend.includes.systemsetting')
         @endif
-        @if (isset($residential) && $residential->checked == 1)
+        {{-- @if (isset($residential) && $residential->checked == 1)
             @include('frontend.includes.door-maintainance')
-        @endif
-        {{-- @include('frontend.includes.services-sec-location') --}}
+        @endif --}}
+        @include('frontend.includes.services-sec-location')
 
     </div>
 

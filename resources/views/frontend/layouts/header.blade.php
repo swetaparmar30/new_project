@@ -251,6 +251,9 @@
                                         <li>
                                             <a href="{{url('locations/lincoln-garage-doors')}}/">Lincoln, NE</a>
                                         </li>
+                                        <li>
+                                            <a href="{{url('locations/demo-garage-doors')}}/">Demo, NE</a>
+                                        </li>
                                        
 
                                         {{-- <li>

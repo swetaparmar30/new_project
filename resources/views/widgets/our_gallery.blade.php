@@ -114,7 +114,7 @@ if($gallery_slider == true && $config['gallery_column'] == 'col-12')
             @endif
         </div>
 
-        <a href="{{route('front.photo_gallary')}}" class="common-btn text-center">View All</a>
+      
 
     </div>
 </div>
