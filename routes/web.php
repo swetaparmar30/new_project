@@ -41,6 +41,7 @@ use App\Http\Controllers\NewsletterController;
 
 |--------------------------------------------------------------------------
 
+
 | Web Routes
 
 |--------------------------------------------------------------------------
@@ -56,7 +57,13 @@ use App\Http\Controllers\NewsletterController;
 |
 
 */
+Route::get('design',function() {
+   return view('design');
+});
 
+Route::get('articles',function() {
+   return view('articles');
+});
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('track.visitors');
 
